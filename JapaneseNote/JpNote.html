@@ -1,0 +1,1024 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>日文筆記~~~</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1f163bb6-f7f8-4880-a564-6fc66042cdf3" class="page sans"><header><h1 class="page-title">日文筆記~~~</h1></header><div class="page-body"><p id="c357ddba-bb05-4353-a26b-f99a918537e9" class="">
+</p><figure id="48538a1a-6e74-422e-a941-78632e604dd7" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7/Untitled.png"><img style="width:672px" src="sourse/1.png"/></a></figure><hr id="61c0bf54-4575-40a1-84dc-87d698ee48c8"/><p id="4d36d6c6-5022-445d-a418-de7898a4109d" class="">
+</p><h2 id="6d84e55c-128f-4211-bd87-c506aa2031f6" class="">日文初級 #7｜動詞の分類、動詞の变形、動詞のます形</h2><p id="c46ca46b-7770-4944-ba2e-c026b5ddba44" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="596ac217-6ca0-4e81-8771-3b15d8ec6483"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">(人) <mark class="highlight-red">に　　</mark>～をもらいます
+(人) <mark class="highlight-red">から</mark>　～をもらいます       <mark class="highlight-teal">// 可以替換</mark></div></figure><p id="ca0565e8-c589-4765-b998-e2f4c74de555" class="">
+</p><ul id="fdcb4b14-cc18-4640-8cd2-7f7c63347f98" class="bulleted-list"><li><strong>動詞的分類</strong><p id="e0beed12-5b6f-4683-94e3-e9b8d463404b" class="">第一類 :　ます型的前面一個字的母音為ｉ</p><p id="bf991977-e28b-42d4-be20-83c9a099d197" class="">　　　　例如：休みます　書きます　使います</p><p id="1f41b59b-845d-4420-afe8-46cdcf41b0b4" class="">第二類 :　ます型的前面一個字的母音為ｅ</p><p id="1bb60cca-048c-48ac-a66c-09c8f24b0df9" class="">　　　　例如：食べます　寝ます</p><p id="5e7185b9-20fc-4994-b078-0e342761fd6b" class="">第三類 :　来ます　します</p><p id="a83ea6f2-749f-422b-a21f-5901d9b4ebc0" class="">　　　　例如：勉強します　運動します</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5d91d05c-d0ae-4f19-957d-b16442d233d4"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">起きます　見ます　是第二類動詞　！！！</div></figure><p id="644c1570-fe03-4ebe-99e7-082cfd5ab706" class="">
+</p></li></ul><ul id="22bd98a2-4ac5-4882-82df-9d0b500096cf" class="bulleted-list"><li><strong>ます型　－＞　禮貌、最常用的型態</strong></li></ul><p id="59d478aa-7d4d-4f78-8a39-468fb6de5813" class="">
+</p><figure id="34d343e1-b8a5-4c94-98d0-6ea788bed8f7" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7/_2021-03-02_222550.png"><img style="width:873px" src="sourse/2.png"/></a></figure><p id="cf54705b-ae1a-4454-8563-7cb7f6380ad0" class="">
+</p><ul id="3527730d-6b89-48c8-91ca-62ed268c8618" class="bulleted-list"><li><strong>例句：</strong><p id="b8e7c804-00b7-4a83-a20e-25a631a14929" class="">私は明日働きません　　// <mark class="highlight-teal">我明天不上班</mark></p><p id="60f236d8-b82a-4940-a9a5-4bf67ef1dd40" class="">私は昨日働きました        // <mark class="highlight-teal">我昨天上班</mark></p><p id="771e246d-dad4-41e7-a236-35efc5d2b6e2" class="">森さんはー昨日働きませんでした         // <mark class="highlight-teal">森先生昨天沒上班</mark></p><p id="4cf6d23c-14f8-41b0-b08d-4748f618b0e8" class="">
+</p><hr id="e68129cf-bc4c-4625-9335-4d6e5c429c12"/></li></ul><h2 id="cfc63f65-2c44-467b-b500-e8dbbc0c551e" class="">日語初級#12 ｜日語語法解釋 あげます／もらいます／くれます</h2><p id="fd1f1a05-ae48-4c88-b61b-f4e3ca6fe6b3" class="">
+</p><figure id="9243f98e-1ced-47b8-9ab7-00f148d6e903" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7.png"><img style="width:480px" src="sourse/3.png"/></a></figure><p id="2d3b4252-50c6-40ee-b20b-5496e70abaab" class="">
+</p><ol type="1" id="9bd7d3ad-f8c8-4400-aeed-ec14db9b67d7" class="numbered-list" start="1"><li> ( 人1 )  は  ( 人2 )   に  ( 物 )  をあげます　-＞ 人1  給 人2 物品<p id="e1539329-a1a1-4d6b-8340-1a0fbbfc4bc8" class="">
+</p><p id="48e807cd-fd12-4c2d-91cf-efafde352c21" class="">私は森さんにチョコレートをあげました。       <mark class="highlight-teal">// 我給森先生巧克力。</mark></p><p id="34cd0ace-a32b-43a4-95d5-9bfcb3617cd9" class="">吉田さんは森さんに花をあげました。             <mark class="highlight-teal"> // 吉田先生給森先生花。</mark></p><p id="7f7455b7-b299-4a1e-b43d-8d3cebbfe7d2" class="">母は森さんにケーキをあげました。                  <mark class="highlight-teal">//  母親給森先生蛋糕。</mark></p><p id="b7ccb7e8-74b3-42cd-8922-9f4c82f26d49" class="">
+</p></li></ol><ol type="1" id="830790ff-a546-40c5-89a2-ad18d09d58ed" class="numbered-list" start="2"><li> ( 人1 )  は  ( 人2 )   に  ( 物 )  をもらいます　-＞ 人1  從 人2 拿到物品<p id="5ab7d15d-bb32-41e6-a483-997d08f9b08b" class="">
+</p><p id="530467fd-8f57-4a28-96aa-0586d07afb45" class="">私は吉田さんに写真をもらいました。                     <mark class="highlight-teal"> // 我從吉田先生那裏得到照片。</mark></p><p id="fce7c492-02ea-451e-882f-ee07933a0253" class="">母は先生に本をもらいました。                                 <mark class="highlight-teal">// 母親從老師那裏得到一本書。</mark></p><p id="ebc89851-9868-46a8-a754-83db1b9d2f2a" class="">田中さんは森さんにプレゼントをもらいました。    <mark class="highlight-teal">// 田中先生從森女士那裏得到禮物。</mark></p><p id="04f4ad3c-d84d-4b1f-ae32-bab6c4291b4c" class="">
+</p></li></ol><ol type="1" id="1044da66-2466-438f-85bb-548b0d449c9f" class="numbered-list" start="3"><li>  ( 人1 )  は  ( 人2 )   に  ( 物 )  をくれます　-＞ 人2  從 人1 拿到物品<p id="236c6a2c-50c3-4636-b75a-3d5f9e217303" class="">
+</p><p id="3931f269-4e61-4963-9cdf-535758a1b42c" class="">祖母は私にお年玉をくれました。     <mark class="highlight-teal">// 我從祖母那邊拿到壓歲錢。</mark></p><p id="bb29298d-6239-4fe0-a972-1321c5f23e8a" class="">昨日先生は娘に本をくれました。    <mark class="highlight-teal"> // 昨天女兒從老師拿到書。</mark></p><p id="d833be42-2225-421b-a7f3-fe46f246629c" class="">
+</p></li></ol><hr id="eb8b956e-3731-486d-89b7-df537aeac92f"/><p id="56a566aa-0e75-4016-8dd4-c53462d9e05e" class="">
+</p><h2 id="ee348f91-6bd6-4e5d-993c-5ee49640ac1c" class="">日語初級#13｜い形容詞的用法（否定形、過去形、＋名詞）</h2><p id="5f83a97a-ba51-419c-a1b3-f51e4c22675f" class="">
+</p><ol type="1" id="98e0d641-7388-42fe-be78-0a1620fcba5b" class="numbered-list" start="1"><li> (名詞)   は   (い形容詞)   です<p id="1af66200-ecb9-4aa9-9132-447f681ebd0a" class="">
+</p><p id="d373001a-c4e2-498f-aa78-e40369a8ab92" class="">このスープは辛いです。                <mark class="highlight-teal">  // 這個湯很辣。</mark></p><p id="db7b9287-4b64-4a73-91b5-1478092cabcb" class="">そのカメラは高いです。                 <mark class="highlight-teal"> // 那台相機很貴。</mark></p><p id="d5fd0c67-bc7e-40e3-bd77-ef17cd4a0d8b" class="">北海道は寒いです。                         <mark class="highlight-teal">// 北海道很冷。</mark></p><p id="0f58eb8e-16a7-4549-ac4f-fcde25effd55" class="">あの女の子はとても可愛いです。   <mark class="highlight-teal"> // 那個女孩子很可愛。</mark></p><p id="2ac72348-5932-4d93-a4e5-939238ee8303" class="">
+</p></li></ol><ol type="1" id="6d9a06d9-54eb-4ee9-9b3c-c88b8f724c32" class="numbered-list" start="2"><li>い形容詞の否定型　<p id="c586b52a-3b34-44df-af81-51ea4a633689" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="cbb32862-8c02-4490-a790-96e4d3c98df6"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">い    -＞   <mark class="highlight-red">くないです</mark>
+　　　     <mark class="highlight-red">く/ じゃ（では）ありません</mark></div></figure><p id="df63e254-d68e-43d0-92ba-c1765923751f" class="">
+</p><p id="01c21663-9da4-4cf9-960e-afabdb63108e" class="">この服は高くないです。                        <mark class="highlight-teal"> // 這件衣服不貴。</mark></p><p id="6d0b42c0-f652-4b1b-ad90-4e024a26222c" class="">今日は寒くありません。                         <mark class="highlight-teal">// 今天不冷。</mark></p><p id="7ff13497-100c-47b0-ba52-0ee484c18951" class="">抹茶は甘くありません。                         <mark class="highlight-teal">// 抹茶不甜。</mark></p><p id="70dee186-bfb4-4b10-99ba-5a40c860031c" class="">試験の結果はあまり<mark class="highlight-red">よ</mark>くありません。   <mark class="highlight-teal">// 考試的結果不太好。</mark></p><p id="f3da7bb2-aeb9-4d5d-8207-ed344cdce47e" class="">
+</p></li></ol><ol type="1" id="6aed31b1-c2d7-4ea9-9fc5-42b5f5d62da0" class="numbered-list" start="3"><li>い形容詞の過去式<p id="e07bee39-cbdb-43a4-b438-d8f53fbd4c5d" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0d02ad0d-efd8-4cd3-b28f-d061f2d21e35"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>肯定文的過去式                   否定文的過去式</strong>
+い　-＞　かった　　           くない　-＞　くなかった
+                                             くありません　-＞　くありませんでした</div></figure><p id="2d67db60-377e-4593-9fdc-48277ff2787d" class="">
+</p><p id="d09d30f3-79df-4111-84af-70df4430fb74" class="">旅行は楽しかったです。                        <mark class="highlight-teal">   // 旅行愉快。</mark></p><p id="64da639c-ebd2-4a2f-a44b-c07c2960bc26" class="">昨日は暑かったです。                               <mark class="highlight-teal">// 昨天很熱。</mark></p><p id="cb5fff3c-5942-464f-a561-3e7e2c24d690" class="">ホテルの部屋は広くありませんでした。 <mark class="highlight-teal"> // 酒店的房間不寬敞。</mark></p><p id="92c63f78-e905-459f-8516-9ec799be4218" class="">サービスはよくなかったです。               <mark class="highlight-teal"> // 服務不好。</mark></p><p id="45763565-2ad6-4619-8278-2f7fbed23344" class="">
+</p></li></ol><ol type="1" id="ca39b320-d3f0-495d-b9d0-2b50337bc2ee" class="numbered-list" start="4"><li> い形容詞 + 名詞<p id="57bb1a63-8b1b-4b4d-841e-be3b91316440" class="">
+</p><p id="67311009-b0c2-4e0d-8151-340aa1af4f78" class="">可愛い人             <mark class="highlight-teal"> // 可愛的人</mark></p><p id="38b55385-a0a5-4f62-aed3-752e9ab31e26" class="">広い部屋             <mark class="highlight-teal"> // 寬的房間</mark></p><p id="9b80fdbb-339a-4d70-9297-ae1937287685" class="">新しいパソコン  <mark class="highlight-teal"> // 新的電腦</mark></p><p id="806e69fa-8c84-4516-9030-1f75a0f78631" class="">近い場所           <mark class="highlight-teal">   // 近的地方</mark></p><p id="136b8db8-363c-450a-93ff-45f2bcfd3da0" class="">いい人                  <mark class="highlight-teal">// 好人</mark></p><p id="6df65859-167f-4a19-872b-a1f677feddf6" class="">悪い人                <mark class="highlight-teal">  // 壞人</mark></p><p id="49e4912f-172b-4fd0-9fb5-0e11ee6cb2cb" class="">
+</p></li></ol><hr id="40b9a0d0-bfab-4d1d-9bf7-de660f165b5c"/><p id="e58b3d8f-786f-408a-81aa-a4743b9c7778" class="">
+</p><h2 id="cf415937-70a6-4dfe-8b61-7158cb7a09dd" class="">日語初級#14｜な形容詞的用法（否定形、過去形、＋名詞）</h2><p id="2d71b192-b1a9-48f0-9d69-afd6703b9b38" class="">
+</p><ol type="1" id="ba29487d-f008-452e-a079-a5848a8258cd" class="numbered-list" start="1"><li>(名詞)    は    (な形容詞)    です<p id="c40e2fd5-e01c-4da6-8c65-fa247b3b636f" class="">
+</p><p id="019cbb25-f189-4232-ad1c-28893584c5ab" class="">この町は賑やかです。       <mark class="highlight-teal">// 這個城市很熱鬧。</mark></p><p id="88afaec0-3987-4e4a-bb09-3007575a6360" class="">富士山は有名です。          <mark class="highlight-teal">// 富士山很有名。 </mark></p><p id="2664dbd0-7213-415a-a3a9-d9bebec0e42e" class="">明日は暇です。               <mark class="highlight-teal">  // 明天我有空。</mark></p><p id="9a94d38f-6682-428e-b193-7343d84dccd4" class="">この通りは静かです。     <mark class="highlight-teal"> // 這條街很安靜。</mark></p><p id="5e946761-1e3c-47ef-99cf-d7c67c53ee9d" class="">
+</p></li></ol><ol type="1" id="dde10e98-75ad-463d-bbbd-09337253019a" class="numbered-list" start="2"><li> (な形容詞)　の　否定型<p id="4d0478a9-70d9-4bd6-ab57-559756318875" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9d3ed6ca-bc60-4127-8c1a-d41ac28124da"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"> 綺麗　-＞　綺麗  ではありません      ( 偏書面 )
+　　　　　　　　 じゃありません      ( 偏口語 )
+　　　　　　　　 じゃないです          ( 偏口語 )</div></figure><p id="c36f8488-5f52-4b32-8d48-af41002bf2db" class="">
+</p><p id="4d0cd8eb-2480-480c-96ac-a9678abf2911" class="">この問題は簡単ではありません。      <mark class="highlight-teal">   //  這問題不簡單。</mark></p><p id="5253aebe-6817-4169-a3d2-2948303b9bb8" class="">森さんの部屋は綺麗じゃありません。 <mark class="highlight-teal"> // 森先生的房間不乾淨/ 不整齊。</mark></p><p id="6c963f0d-44de-49b0-a5be-b77e86255acf" class="">彼は有名じゃないです。                        <mark class="highlight-teal">// 他不有名。</mark></p><p id="2a1c8aff-90be-48bd-bd76-7237c01d8425" class="">
+</p></li></ol><ol type="1" id="664ccd26-584b-4bb4-97cc-9f9ec6a38e98" class="numbered-list" start="3"><li> (な形容詞)　の　過去型<p id="0b90997d-4a9c-4a31-bf88-ab2105347c2f" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ece16c3a-386f-416d-a7af-f3e6f8a82f7e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>肯定文的過去式 </strong>                  <strong>否定文的過去式</strong>
+です　-＞　でした　　　   ではありません　-＞　ではありませんでした
+　　　　　　　　　　　　 じゃありません　-＞　じゃありませんでした
+　　　　　　　　　　　　 じゃないです　    -＞　じゃなかったです</div></figure><p id="899438da-d6be-477e-b8dc-13166a6a9d08" class="">
+</p><p id="0a7571d2-9279-48d9-9d18-e2ffa3205681" class="">富士山は綺麗でした。                           <mark class="highlight-teal">// 富士山很美。</mark></p><p id="91286de2-9afd-4d35-bec8-cb275e38e069" class="">渋谷は賑やかでした。                          <mark class="highlight-teal"> // 涉谷很熱鬧。</mark></p><p id="0ab4ed25-6eb8-4a17-997f-c767bfcb2bbe" class="">店員は親切ではありませんでした。     <mark class="highlight-teal">// 店員沒有熱情。</mark></p><p id="c96f3a70-c1a7-40bc-a8ec-d51471d86da1" class="">日本語は簡単でしたか。                      <mark class="highlight-teal"> // 日語很簡單嗎?</mark></p><p id="6600bcb1-951c-4c4d-8391-2cfb739cf806" class="">簡単じゃなかったです。                     <mark class="highlight-teal">  // 不簡單</mark></p><p id="dd9f08bd-0565-46ea-80c0-252937a16e05" class="">
+</p></li></ol><ol type="1" id="43e3c0a6-9311-413f-abc4-5e066182a353" class="numbered-list" start="4"><li>(な形容詞)  + な  +  (名詞)<p id="12f544c5-8f82-4b1b-bd8e-a915a22a9d93" class="">
+</p><p id="0c939c18-c9d3-4a72-a3cd-665bdf065b2d" class="">簡単なこと                  <mark class="highlight-teal">       // 簡單的事 </mark></p><p id="3f698373-bf23-45f8-acf4-f014220cff5b" class="">賑やかな町                       <mark class="highlight-teal">  // 熱鬧的城市</mark></p><p id="b1072dba-7d37-4154-af32-048d300a67e0" class="">有名な人                             <mark class="highlight-teal">// 有名的人</mark></p><p id="40ee065b-d25a-49b4-84bc-67508a979dfc" class="">李さんは親切な人です。<mark class="highlight-teal">    // 李先生是個熱情的人</mark></p><p id="3c42208b-a175-487f-ba29-dd7f3b9a99fe" class="">
+</p></li></ol><hr id="230b7dd3-30a6-4ce2-8e16-615272cacb75"/><p id="979a7aea-a52c-4547-89b6-f839c012f904" class="">
+</p><h2 id="39e74c7e-27d5-4dc8-8dd7-a0675dedff45" class="">日語初級#20｜日語語法 動詞て形的変形規則</h2><p id="ed71f2cb-55e0-43f6-aa25-56f829e94afd" class="">
+</p><ul id="153eb403-609f-490a-bab7-d21407222b20" class="bulleted-list"><li><strong>動詞て型變形規則</strong></li></ul><p id="daec2825-f21d-4402-8b95-cb857e8c1fe5" class="">
+</p><p id="567b58a8-5631-41e5-a89c-e5c059824ad7" class="">第一類動詞</p><figure id="3403e884-3031-4911-aa69-77cb2edcf831" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7%201.png"><img style="width:1087px" src="sourse/4.png"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="cdc5093c-07f8-4378-b9da-34239748a190"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">口訣 　いちり　-＞　って
+        　にみび　-＞　んで
+　　　 き　　　-＞　いて
+　　　 ぎ　　　-＞　いで　　　　　　
+　　　 し　　　-＞　して　　　　　
+　　　 ※行きます　-＞　いって　　　                                </div></figure><p id="14ec0b8c-0fb4-4df6-b144-698a98ab15ef" class="">
+</p><p id="f9deeb52-fb4c-4d6f-acdb-643297dc6902" class="">第二類、第三類動詞 : 動詞後面加て</p><p id="e91c33d8-f33a-4fc6-b6a9-fe2e5f7a9d3b" class="">
+</p><ul id="04a1e28d-57d9-4620-90a3-d10ca5484c0f" class="bulleted-list"><li><strong>使用て型的語法　</strong></li></ul><p id="cf830ad8-7b51-4ec3-bde0-2c0d2ce18d5e" class="">
+</p><ol type="1" id="3eb4d9ec-ab29-4072-b24c-5e9728465b8a" class="numbered-list" start="1"><li> 動詞て形＋ください<p id="5479b34e-8b37-4cc7-804f-d61fb68d28b6" class="">
+</p><p id="3075bb6d-afaa-4fa5-a230-3a5d0e08edb3" class="">見てください　    <mark class="highlight-teal">// 請看</mark></p><p id="cffe1763-5fb4-474a-9b50-47fce79c3890" class="">聞いてください   <mark class="highlight-teal"> // 請聽</mark></p><p id="6908a6d9-6b78-4db9-b0fd-483a020485d6" class="">話してください    <mark class="highlight-teal">// 請說</mark></p><p id="c0b33f21-f38e-4889-9dad-5cf8987cf058" class="">
+</p></li></ol><ol type="1" id="8f1f62c6-b6bd-41b8-9f75-514b0af12fc4" class="numbered-list" start="2"><li> 動詞て形＋動詞</li></ol><p id="4c922936-788d-41a2-bdc7-50dcd65b7e44" class=""><div class="indented"><p id="ad349c63-64eb-45c0-b3a7-c9a013e5ff27" class="">昨日デパートへいって、買い物をしました。　　　<mark class="highlight-teal">// 昨天去百貨商場買東西了。</mark></p><p id="b5e554ad-01fb-436e-ae45-3f73749cd944" class="">今日は家帰って、宿題をします。                             <mark class="highlight-teal">// 今天我回家，(然後)做作業。</mark></p><p id="91b67b83-e2aa-4fab-b6f0-b92a5ae0ba54" class="">図書館へいって、、本を借りて、家へ帰ります。    <mark class="highlight-teal">// 去圖書館借書，(然後)回家。</mark></p><p id="8d7ab95d-9fd9-4c0b-a1db-aa0e14844adc" class="">
+</p><hr id="519a3b77-3d9c-407e-bf20-5702547012ca"/></div></p><p id="704c2053-bd0b-4a26-b527-16069062a0c1" class="">
+</p><h2 id="1086ad65-410a-4b2a-989c-ff21df4f27e2" class="">日語初級#21｜日語語法 使用動詞て形的語法 (上)</h2><p id="8e6d14d4-1fc9-4416-a04a-8e4024d739b6" class="">
+</p><ol type="1" id="0e395361-9387-416d-9a00-7071c8f00339" class="numbered-list" start="1"><li> ( 動詞て型 )  +  もいいです　-＞ 表示許可時可使用<p id="f09ddd51-eaee-4e2d-930d-837ed94e1f0b" class="">
+</p><p id="c825ea6c-a944-4400-bce5-140a7641d8b7" class="">自宅で仕事をしてもいいです。　 // <mark class="highlight-teal">在自己家工作也可以。</mark></p><p id="d8ac1349-e619-4df8-ba3e-3e2689897c15" class="">試着してもいいですか。              <mark class="highlight-teal"> // 可以試穿嗎?</mark></p><p id="6f3d2685-229a-4482-8a2b-e092dd75d7f0" class="">写真を撮ってもいいですか。        <mark class="highlight-teal">// 可以拍照嗎?</mark></p><p id="1f12c105-40d3-46be-aea5-1f28dd6ac03b" class="">いいですよ。                                  <mark class="highlight-teal">// 可以。</mark></p><p id="01e66658-f3c6-4f2d-9f4d-8df66d02ff56" class="">すみません、写真はちょっと....     <mark class="highlight-teal">// 不好意思，拍照有點..... </mark></p><p id="606e08b0-718f-4b67-83e6-c4cc80376a18" class="">
+</p></li></ol><ol type="1" id="fef80e1e-f5b4-4317-9e10-1422ddc52e19" class="numbered-list" start="2"><li> ( 動詞て型 ) + はいけません　-＞ 表示禁止時使用<p id="cd1f5bc5-49e8-43f6-b6b9-e59b304cca85" class="">
+</p><p id="c186ed8f-787e-455e-a952-e64d0e401b16" class="">写真を撮ってはいけません。　　　　　<mark class="highlight-teal">// 不可以拍照片。</mark></p><p id="cd71fbf2-432d-4498-be15-eb75831f0c08" class="">ここでタバコを吸ってはいけません。   <mark class="highlight-teal"> // 在這裡不可以抽菸。</mark></p><p id="da4ac131-82d0-4e1c-a676-c99cd2020d59" class="">庭の中に入ってはいけません。              <mark class="highlight-teal"> // 不可以進庭院裡。</mark></p><p id="479a1045-04db-4170-9343-1cb8b0c4484a" class=""> </p></li></ol><ol type="1" id="dbd11f17-3986-45d0-8c7c-b14e60702152" class="numbered-list" start="3"><li> ( 動詞て型 ) + います　-＞表示動作或變化正在進行時使用<p id="5ee76a11-1fb0-42e9-943f-f73555924c4e" class="">
+</p><p id="6cc6d51b-0f40-4491-b740-9d3d4fd64b52" class="">森さんは今本を読んでいます。　　　<mark class="highlight-teal">// 森女士現在正在看書。</mark></p><p id="442b8b42-66bd-4a2a-a97c-14c5f6afe7f3" class="">前田さんはテレビを見ています。     <mark class="highlight-teal">  // 前田先生正在看電視。</mark></p><p id="0b4b4b6f-4ddd-41bf-ae64-8e82f81602cc" class="">佐藤さんは今何をしていますか。       <mark class="highlight-teal">// 佐藤先生現在正在做什麼?</mark></p><p id="9d6443b0-43c7-4c43-9de1-884024cf88bd" class="">佐藤さんは今会議をしています。       <mark class="highlight-teal">// 佐藤先生線在正在開會。</mark></p></li></ol><p id="795ecacd-1de4-4309-944d-ce4d92bf59dc" class="">
+</p><hr id="3c59c6bb-69f4-4a1c-9e49-74de0f852758"/><p id="1983c1b5-cdb9-4d9e-994f-08b147b4f9c1" class="">
+</p><h2 id="297b1275-28f9-4ca9-9daa-5fbf546bf90f" class="">日語初級#22｜日語語法 使用動詞て形的語法 (下)</h2><p id="11d5500e-9a55-4463-a644-bfd5a6eb559d" class="">
+</p><ol type="1" id="d132ce5e-0d98-4c3f-baa5-a0c964ecb605" class="numbered-list" start="1"><li> (<strong> 動詞て型 ) + から　-＞ 表示</strong><strong><mark class="highlight-red">兩個以上的動作</mark></strong><strong>依照時間順序</strong><strong><mark class="highlight-red">相繼發生</mark></strong><strong>時使用</strong><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8391b502-416e-4bb2-91aa-429c4a0ffc4b"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">在一個句子內<mark class="highlight-red">不能重複使用</mark>
+✕　　　~てから、~てから、~てから～。
+O　　　~てから、
+
+第20課  動詞て形＋動詞   →  <mark class="highlight-red">可以重複使用</mark>
+O　　　～図書館へいって、、本を借りて、家へ帰ります。</div></figure><p id="77e0778b-565e-41ef-b77a-3bca8b5ee3f2" class="">
+</p><p id="74597961-c4b7-4151-a536-9490abf2449d" class="">朝ごはんを食べてから出かけます。                                  <mark class="highlight-teal">// 吃了早飯後出門。</mark></p><p id="88aff5a1-be0b-49ea-b5e7-bcb52d19ee24" class="">王さんは毎晩ドラマを見てから寝ます。                           <mark class="highlight-teal">// 小王每晚看了電視劇後睡覺。</mark></p><p id="9ee90d65-9d0b-4273-9f5c-504260b1553e" class="">家へ帰ってから、もう一度日本語の勉強をします。        <mark class="highlight-teal"> // 回家後，在學一遍日語。</mark></p><p id="5e45fb15-a030-43dc-b3bd-a9f11e28b2d8" class="">コンビニでおにぎりを買ってから、学校へ行きます。    <mark class="highlight-teal"> // 在便利商店買完飯糰後去學校。</mark></p><p id="82954b41-6ba9-4dbe-aead-b45927af690b" class="">
+</p></li></ol><ol type="1" id="fe730cd2-b79f-40e8-8f40-5002a38b04f1" class="numbered-list" start="2"><li><strong> ( 動詞て形 )＋あげます／もらいます／くれます</strong><p id="41af8435-bccd-42bc-ae1b-9b29295959d1" class="">
+</p><ul id="8dfaa1a7-a009-42cf-a348-3303d802d4a1" class="bulleted-list"><li>動詞て形 + あげます    -＞ 讓對方受恩惠使用      <mark class="highlight-red">(少用)</mark><p id="4e48b697-cec4-4eec-9862-ca518916cb53" class="">私は弟に日本語を教えてあげます。         <mark class="highlight-teal">// 我教弟弟日語。</mark></p><p id="c5167575-4f2e-45ff-84ca-c8fa10fee847" class="">
+</p></li></ul><ul id="63bb43c2-0a7b-45bb-a04c-9308e9fffac1" class="bulleted-list"><li>動詞て形 + もらいます　-＞ 行為接受者(受益方)為主語<p id="47d65030-018d-4f67-8763-946536f733bc" class="">私は先生に日本語を教えてもらいます。   <mark class="highlight-teal">// 我請老師教日語。</mark></p><p id="7592a4d6-de7c-4447-8aac-1b178defe1ea" class="">
+</p></li></ul><ul id="ea8d35d6-1cda-4842-bab2-2edd79a12f1d" class="bulleted-list"><li>動詞て形 + くれます　-＞ 行為的實施者為主語，說話人接受這行為感到恩惠<p id="e470d252-8122-44f3-bc3b-db9d28463e39" class="">先生はわに日本語を教えてくれます。       <mark class="highlight-teal">// 老師教我日語。</mark></p><p id="e0b5a0f0-5caa-41a8-9401-7bc40b7f756f" class="">
+</p></li></ul></li></ol><hr id="532a3f61-cefd-4b1d-a0de-8e349bc3bf4c"/><p id="201610de-b2b6-43f6-a408-37f4705e645b" class="">
+</p><h2 id="faa7e2c8-3e0e-4810-a101-0565bfbe94ea" class="">日語初級#23｜表示離開/經過的を、表示附着点的に、表示移動行為的目的地的に</h2><p id="3a55eb53-6e93-451e-96ff-c4877461df3c" class="">
+</p><ul id="8b3ed2f7-3e24-4d76-b217-b7d4c0f86e94" class="bulleted-list"><li>吉田さんは来月大学<mark class="highlight-red">を</mark>卒業します。     <mark class="highlight-teal"> // 吉田女士下個月大學畢業。</mark></li></ul><ul id="129bc5f3-b76c-4ed9-8627-34053633323e" class="bulleted-list"><li>このバスは駅前<mark class="highlight-red">を</mark>通ります。                <mark class="highlight-teal"> // 這輛巴士經過車站一帶。</mark></li></ul><ul id="9611e43d-4ff0-4235-821e-8cd8457d0459" class="bulleted-list"><li>ここ<mark class="highlight-red">に</mark>座ってください。                       <mark class="highlight-teal"> // 請坐在這裡。</mark></li></ul><ul id="918e5a24-572c-4ac1-86ec-cc69d30e44ae" class="bulleted-list"><li>かばん<mark class="highlight-red">に</mark>財布をいれました。                 <mark class="highlight-teal">// 把錢包放在包裡了。</mark></li></ul><p id="1355bede-6fbc-45f8-8dcf-4b56bb36304f" class="">
+</p><hr id="e64e4762-080b-4ee2-8360-db37e136c0b3"/><p id="9441376d-8e82-47c3-a970-8b024a46437f" class="">
+</p><h2 id="fdadf8fa-1da1-4e00-b35d-6def5845142d" class="">日語初級#24｜表示願望時使用的～がほしい 以及～たい／たくない的用法，全面否定的表達方法</h2><p id="acdee4f1-17d4-47bf-bd5b-7748f07f91ee" class="">
+</p><ol type="1" id="9bb4c1dc-d7d5-43bf-85db-d8614e0d3011" class="numbered-list" start="1"><li><strong> ( 名詞 ) + </strong><strong><mark class="highlight-red">が </mark></strong><strong>欲しいです</strong><p id="741ac7f0-319a-4a81-ba5c-f4d07b1457d6" class="">
+</p><p id="134376b0-0cd6-4e4c-8cfe-6ea5981a2b2e" class="">新しい携帯電話が欲しいです。      <mark class="highlight-teal">// 我想要新的手機。</mark></p><p id="fda7db49-3c8a-4b89-84dd-898ccf9b634e" class="">綺麗をスカートが欲しいです。      <mark class="highlight-teal">// 我想要漂亮的裙子。</mark></p><p id="8b45f24b-10f3-4d86-be7b-ee0f634c4742" class="">何が欲しいですか。                        <mark class="highlight-teal">// 你想要什麼 ?</mark></p><p id="e23187cc-ec8a-4ad0-a1b1-706b9b0df29b" class="">豊田の車が欲しいです。                 <mark class="highlight-teal">// 我想要豐田的汽車。</mark></p><p id="079c50f5-20ef-4e6e-a892-9fc8ef8dd093" class=""> </p></li></ol><ol type="1" id="a0bad9a4-ae2d-480f-833d-c2dbe3533a2b" class="numbered-list" start="2"><li> <strong>( 動詞 ) + たいです　/　たくないです　-＞ 想要...  / 不想要...</strong><p id="ffc52dc7-86d8-420a-b54d-537f2e15c098" class="">
+</p><p id="63c5e2fe-e917-4b28-a056-d8b7fe6363e2" class="">日本の映画を見たいです。             <mark class="highlight-teal"> // 我想看日本的電影</mark></p><p id="321a37ca-e910-4e54-b6a9-6debf8b52606" class="">オーストラリアへ行きたいです。   <mark class="highlight-teal">// 我想去澳大利亞。</mark></p><p id="7e9d4136-60a5-444c-a356-a4c03851cc4e" class="">父に会いたいです。                         <mark class="highlight-teal">// 我想看父親。</mark></p><p id="4cef07e4-26e5-4ab4-9cc5-d5226e408667" class="">友達と遊びたいです。                     <mark class="highlight-teal"> // 我想跟朋友一起玩。</mark></p><p id="90d32f22-aaed-46a1-ab38-4225dc74a76d" class="">
+</p></li></ol><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4c8c8da7-405f-4305-9bb9-1b981f12cd85"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">たい的對象有時不用<mark class="highlight-red">を</mark>，而用<mark class="highlight-red">が</mark>。特別是吃/喝等<mark class="highlight-red">本能性願望</mark>時使用<mark class="highlight-red">が</mark>
+
+＊水が飲みたい。        <mark class="highlight-teal">// 我想喝水。</mark>
+＊蕎麦がたべたい。     <mark class="highlight-teal">// 我想吃蕎麥麵。</mark></div></figure><p id="36a77732-cffa-4553-b801-f2efd46e6e82" class="">
+</p><p id="49eca007-4db0-4797-a008-ba24c869e427" class=""><strong>3.   全面否定的表達意思</strong><div class="indented"><p id="6447cf35-1f7d-48ed-9902-15ca58df1777" class="">
+</p></div></p><ol type="1" id="6a25f36a-19aa-4d53-a57e-65e682b4063d" class="numbered-list" start="1"><li> [名詞] + を + 動詞      -＞    [疑問詞] + も + 否定型式<p id="a4f506c6-8cf3-4ad0-a49d-efea40d1a0fc" class="">
+</p><p id="48f05a8c-6ede-4da8-99d0-4400aa9aa301" class="">Q :  何をしたいですか。            <mark class="highlight-teal">// 你想做什麼?</mark></p><p id="0b534d6d-a631-4855-9af0-81c0f9740b9d" class="">A :  何もしたくありません。　 <mark class="highlight-teal"> // 什麼都不想做?</mark>
+</p></li></ol><ol type="1" id="d46846e7-7009-4878-abfd-78a238c32e6e" class="numbered-list" start="2"><li> [名詞] + に / から / と + [動詞]       -＞　[疑問詞] + にも / からも / とも + 否定形式<p id="5c5b01ba-c2be-42d3-beef-9cbb53edfe6e" class="">
+</p><p id="b9fed543-a495-43cd-acdf-37361a67588d" class="">誰にも会いたくないです。       <mark class="highlight-teal">// 誰也不想見。</mark></p><p id="ce7b6b60-d49f-4778-a206-234fffc3ac8e" class="">誰とも協力しません。              <mark class="highlight-teal">// 跟誰都不合作。</mark></p><p id="137215ac-ceac-4e4a-b7a1-6a4f39a772f8" class="">
+</p></li></ol><ol type="1" id="34f93fea-dc0e-4076-882a-81211da18c2a" class="numbered-list" start="3"><li>[名詞] + へ + [動詞] 　-＞　[疑問詞] + も / へも + 否定形式<p id="98f380b5-1fc7-4664-8d39-9fa4de427e44" class="">
+</p><p id="04af0b5c-388b-45fb-b552-7bcebcef1827" class="">Q : 週末どごへ行きたいですか。   <mark class="highlight-teal"> // 周末你想去哪裡?</mark></p><p id="886aa60f-d639-4f8d-911c-220e2aa0e4f0" class="">A : どこへも行きたくないです。   <mark class="highlight-teal"> // 哪兒都不去。</mark></p><p id="1d4aff25-1d03-4f7c-8d27-67ecb313d61d" class="">
+</p></li></ol><hr id="49791e14-ed98-4ff4-9693-28b6d4e31954"/><p id="5c5571a0-7b41-44dd-8167-e509fc13e61f" class="">
+</p><h2 id="ddb4cfec-e2d6-4456-85ef-395f62328ca9" class="">日語初級#25｜主動幫忙時使用的 ましょうか、ませんか／ましょう／ましょうか的區別、〔疑問詞〕＋でも</h2><p id="63bb847c-f4a2-4ea9-87c9-c362298b29cf" class="">
+</p><ol type="1" id="342c3160-2051-49dd-836a-edeebafa7956" class="numbered-list" start="1"><li><strong> [動詞] ましょうか</strong><p id="1885e73e-f3c8-43a9-9534-8f663a6d5b45" class="">
+</p><p id="b07692bf-4279-4b7c-ac67-4aea119589ee" class="">荷物を持ちましょうか。       <mark class="highlight-teal"> // 要不要幫你拿行李。</mark></p><p id="ac574c30-2e4a-44e5-93f0-4f597cbf80a6" class="">写真を撮りましょうか。        <mark class="highlight-teal">// 要不要幫你拍照片。</mark></p><p id="2d859a0b-9c4f-4361-9da9-dcf3d5dbb9cd" class="">駅まで送りましょうか。      <mark class="highlight-teal">  // 要不要幫你送到車站。</mark></p><p id="5e1f0e43-fdba-46af-8413-5d8662da7dcf" class="">
+</p></li></ol><ol type="1" id="00680066-65bd-47a9-b69c-3a51400821e9" class="numbered-list" start="2"><li> <strong>～ましょうか、～ましょう、～ませんか　的區別</strong><p id="7168a4fd-d9f5-4efb-9252-89562e68b02d" class="">
+</p><ul id="25910502-0835-4ae3-90ec-e6685bc02e96" class="bulleted-list"><li>[動詞] ～ましょうか　-＞  <mark class="highlight-red">主動幫忙</mark>時使用<p id="ae5fabe5-a952-464b-82f8-95d0804c10fc" class="">荷物を持ちましょうか。　<mark class="highlight-teal"> // 要不要幫你拿行李。</mark></p></li></ul><p id="9c34ded6-4b06-4f36-a1e0-32939773a93e" class="">
+</p><ul id="c2878167-c828-4ac6-a7c8-d939ef163bce" class="bulleted-list"><li>[動詞] ～ましょう　-＞  表示<mark class="highlight-red">提議</mark>時使用<p id="588045e7-6fa8-44f0-b11b-6ddc2b1ae349" class="">少し休みましょう。           <mark class="highlight-teal">// 休息一下吧。</mark></p></li></ul><p id="f65e1339-b1fe-4b82-9a37-24d94b0f50f4" class="">
+</p><ul id="56003d0f-2152-4544-82be-97be4d0296df" class="bulleted-list"><li>[動詞] ～ませんか　-＞  表示<mark class="highlight-red">提議</mark>時使用<p id="6deae22f-ca72-447e-ad8d-f3311ab537b7" class="">少し休みませんか。　　　<mark class="highlight-teal">// 休息一下怎麼樣 ?</mark></p><p id="451c9c8b-bfb6-47b8-bc38-feb1e70ed6e2" class="">
+</p></li></ul></li></ol><ol type="1" id="5c3e73a2-43d7-4710-bad7-335dafa50fac" class="numbered-list" start="3"><li> <strong>[疑問句] + でも</strong><p id="039b927d-09ee-4145-9afc-77af9e5b34cd" class="">
+</p><p id="121e58a0-9254-4b4d-9732-bbd38a91e297" class=""><mark class="highlight-red">何</mark>をたべたいですか。                  <mark class="highlight-teal">// 你想吃什麼?     (なに)</mark></p><p id="8d3f6573-cbbe-4dd5-b743-6f1e6b5bd23d" class=""><mark class="highlight-red">何</mark>でもいいです。                         <mark class="highlight-teal">// 什麼都行。　 (なん）</mark></p><p id="18e10b0a-f21e-4bbd-8402-74c98b02f9f5" class="">いつでも電話をしてください。   <mark class="highlight-teal"> // 請你隨時打電話。</mark></p><p id="9aa3f9f4-6c7c-46a5-850f-8fa642245b41" class="">誰でもわかります。                      <mark class="highlight-teal">// 誰都明白。</mark></p></li></ol><p id="86c0c131-1c7a-4b1a-b4e4-6de0f2cc6e3c" class="">
+</p><hr id="38b7613a-0e85-487a-ad76-a180384a54f2"/><p id="6e8bfff8-d7d4-4cfc-a292-45ed4e4b5ac1" class="">
+</p><h2 id="7fc81910-9f44-4574-8997-d4b8e1fb1157" class="">日語初級#26｜日語語法 い／な形容詞的て形、い／な形容詞和名詞並列時使用的語法</h2><p id="1bbb1205-346a-424e-ab9c-7a5a1c92c31c" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1709e15d-ec7a-4e36-80ea-b71e8c8ce701"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">い形容詞的て型     :    い　-＞　くて
+
+明るい　-＞　明るくて         <mark class="highlight-teal">// 明亮、開朗</mark>
+安い　　-＞　安くて          <mark class="highlight-teal">  // 便宜</mark>
+忙しい　-＞　忙しくて         <mark class="highlight-teal">// 忙</mark></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bbc6c653-36c8-4710-a240-61baf9fb48df"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">な形容詞的て型　：　後面加で
+
+きれい　　-＞　きれいで         <mark class="highlight-teal"> // 漂亮</mark>
+かんたん　-＞　かんたんで     <mark class="highlight-teal"> // 簡單</mark>
+しずか　　-＞　しずかで          <mark class="highlight-teal">// 安靜 </mark></div></figure><p id="1b12157c-bf2f-426c-8553-cddc285345ae" class="">
+</p><ol type="1" id="be3f1737-b421-42fe-99ea-2c1b4317dda5" class="numbered-list" start="1"><li> <strong>[い形容詞]的並列</strong><p id="8cc06991-87fc-465e-b0d8-3188128dc5e5" class="">
+</p><p id="9f0acb79-21da-4335-a17e-49cb444d71af" class="">安くて美味しい料理が好きです。                   <mark class="highlight-teal"> // 我喜歡又便宜又好吃的菜。</mark></p><p id="e476e99b-b97e-437c-80be-0a8f06f1408e" class="">あのホテルの部屋は広くて明るいです。         <mark class="highlight-teal">// 那家酒店的房間又寬敞又明亮。</mark></p><p id="1d224d96-08f7-4991-82a1-dd0ffbf80f9f" class="">安田さんは背が高くて、かっこいい人です。  <mark class="highlight-teal">// 安田先生是個子高，很帥的人。</mark></p><p id="645ad2bc-d4d6-4c3e-aba4-bc1c1ba3f3c3" class="">
+</p></li></ol><ol type="1" id="2b75c965-8b4e-4df0-b7db-26517c11d706" class="numbered-list" start="2"><li> <strong>[な形容詞]的並列</strong></li></ol><p id="85234ab8-9a01-4f82-b0c8-01809e362777" class=""><div class="indented"><p id="9cd17944-b7a3-4f24-8d28-0884c4e273b8" class="">綺麗で静かなマンションに住みたいです。     <mark class="highlight-teal">// 我想住又漂亮又安靜的公寓。</mark></p><p id="1c5516ba-3543-42a2-99e2-5e033bd92116" class="">このパソコンの操作は簡単で便利です。        <mark class="highlight-teal"> // 這台電腦用起來既簡單又方便。</mark></p><p id="e502dc96-0e9b-4060-831d-f33eb2fe0ee7" class="">複雑で長い試験問題。                                     <mark class="highlight-teal"> // 又複雜又長的問題。</mark></p></div></p><p id="bce6746a-825f-47b9-9c2f-38269995f3eb" class="">
+</p><p id="12d4f4a8-8059-4e8e-98a2-a404ffa95139" class="">3.    <strong>[名詞]的並列</strong></p><p id="ee599a4d-3e83-451c-9cf3-13d5a10cb887" class=""><div class="indented"><p id="dfafdf4c-b605-4b8a-adcc-318e37e277df" class="">この化粧品は資生堂の製品で、日本製です。     <mark class="highlight-teal">// 這個化妝品是資生堂的產品，是日本製造的。</mark></p><p id="36ff50e0-e4fc-4993-82fb-511f568a18c2" class="">伊藤さんは外資系企業の社員で、開発部の部長です。<mark class="highlight-teal">// 伊藤先生是外商職員，開發部的部長。</mark></p></div></p><p id="fb88b7e7-3cfd-445e-bbb3-93228d935a94" class="">
+</p><hr id="97360b34-6bef-4943-a0e8-a218a805d9dd"/><p id="c7d16755-0f88-40c4-b6dc-190770497bff" class="">
+</p><h2 id="872210bb-5167-43d1-b1f0-b21c3e0ce839" class="">日語初級#27 | 動詞的ない形、使用ない形的三種語法</h2><p id="57471b74-6f13-4ee0-85c2-8b97a8c18dd2" class="">
+</p><p id="06e14fa8-8ffa-4f0e-8374-0ad27db4489f" class="">
+</p><ol type="1" id="6945433b-47bd-4ff9-9691-0c7acbef1aed" class="numbered-list" start="1"><li> ます　-＞　ない</li></ol><figure id="32f7ae4c-d12d-4668-bf5d-90c7cb2a5e8a" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7/Untitled%201.png"><img style="width:626px" src="sourse/5.png"/></a></figure><p id="4e0e20b4-8dab-4b15-9c8e-e946e6a97182" class="">
+</p><p id="c9d593ad-2e6b-4d2f-840e-988338ef0c07" class="">2.   [動詞ない型]  + でください     -＞　否定命令<div class="indented"><p id="5592e85f-0f67-42f6-bc95-4c00a56c7c06" class="">
+</p><p id="9093315b-4460-4d4b-a199-2a9dbd88cfbf" class="">忘れないでください。                  <mark class="highlight-teal"> // 請不要忘記。    (二類)</mark></p><p id="7a3fd76e-acc3-453f-a01c-5bd85a66b869" class="">会議室に入らないでください。    <mark class="highlight-teal">// 請不要進入會議室。   (一類)</mark></p><p id="e3887de4-1436-4d52-a1c5-9c0e2c230862" class="">たばこを吸わないでください。   <mark class="highlight-teal"> // 請不要抽菸。  (一類)</mark></p><p id="80a98f0c-38f3-4960-b250-719d86280b70" class="">
+</p></div></p><p id="7d5a4fc9-86d3-41a9-a528-98ef12366406" class="">3.  [動詞] ＋ なければなりません　-＞　表示必須</p><p id="e09f6e33-4119-4685-b81a-e6e31e3e067c" class=""><div class="indented"><p id="f0f8deb3-4fcc-46cf-9a31-bd4c3a7dc44f" class="">毎日薬を飲まなければなりません。 <mark class="highlight-teal"> // 每天必須吃藥。</mark></p><p id="3a9d56ae-cd2d-401b-b64a-6b2af600624f" class="">単語を覚えない<mark class="highlight-red">といけません</mark>か。     <mark class="highlight-teal"> // 我得背單字嗎?</mark></p><p id="801b31b3-2347-453d-9cf3-b2db5b0c5f6e" class="">はい、覚えない<mark class="highlight-red">といけません</mark>。         <mark class="highlight-teal">// 是的，你得背它。</mark></p><p id="8ff0bddc-9ad0-4220-81d6-063bc35232bc" class="">
+</p></div></p><p id="cb94ebf5-e3dc-496b-b7b8-ad20e4c1d322" class="">4.  [動詞] + なくてもいいです　-＞　表示不做某事也可以</p><p id="91cb8bd7-8a32-4963-be3b-1380097608d7" class=""><div class="indented"><p id="d1fa2330-b014-4912-ba96-4e7416b66ce0" class="">今日は残業しなくてもいいです。        <mark class="highlight-teal">// 今天不加班也行。</mark></p><p id="06f6dbf5-506d-4f41-8f54-839a164433aa" class="">飲み干さなくてもいいですよ。            <mark class="highlight-teal">// 不喝完也行。</mark></p><p id="146bbe72-627b-453c-98a6-bfd6a856c7ca" class="">学校へ行かなくてもいいですか。        <mark class="highlight-teal">// 不去學校也可以嗎?</mark></p><p id="61b464c1-759f-4ad5-af90-d0f23868a85f" class="">いいですよ。でも、家で勉強をしなければなりません。     <mark class="highlight-teal">// 行啊。但你必須在家學習。</mark></p><p id="91a60099-3cce-4d8d-946e-0849857fa23d" class="">
+</p></div></p><hr id="1ed60613-1866-41c9-bdf1-ac5a1af0896b"/><p id="4446edca-5fcc-4525-8187-6357d7a9571b" class="">
+</p><h2 id="a6544da9-c581-439d-b58d-f35567951e09" class="">日語初級#28 |  い／な形容詞和名詞的変化 ～なります／します</h2><p id="49fea866-9b97-450c-9587-bda13fa76930" class="">
+</p><ol type="1" id="b952c04b-6f0b-41ca-8be3-d04ec9fd0066" class="numbered-list" start="1"><li> [ い形容詞] + くなります　-＞　表示性質或狀態的變化<p id="2820fdec-a6a3-4202-8634-c7398bcf9c10" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ed2f939f-054d-4169-8ea3-f34151719355"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">安<mark class="highlight-red">い</mark>　　-＞　安<mark class="highlight-red">くなります</mark>
+暖か<mark class="highlight-red">い</mark>　-＞　暖か<mark class="highlight-red">くなります</mark>
+大き<mark class="highlight-red">い</mark>　-＞　大き<mark class="highlight-red">くなります</mark></div></figure><p id="7a2222a8-195d-40d7-8d8e-6a1296b5213b" class="">
+</p><p id="fb8d8ba9-6b75-4403-b241-e106a16a6946" class="">暖かくなりました。     <mark class="highlight-teal"> // 天氣轉暖了。</mark></p><p id="d729337b-7a31-4a1d-ae75-7662b27af9ac" class="">背が高くなりました。<mark class="highlight-teal">  // 長高了。</mark></p><p id="3ee43ea4-7359-4f4d-9ec0-af788dc7999a" class="">
+</p></li></ol><ol type="1" id="92e1ac10-5464-432a-ac06-b9f56ad8a4e1" class="numbered-list" start="2"><li> [い形容詞] +  くします　-＞　因主語的意志性動作或作用引起事物發生變化的時候使用<p id="e8100af0-0242-40c6-a258-666b4aeddf3b" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="51239a49-d74e-4c7d-bf0f-fe54bbdbcd52"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">高<mark class="highlight-red">い</mark>　　-＞　高<mark class="highlight-red">くします</mark>
+小さ<mark class="highlight-red">い</mark>　-＞　小さ<mark class="highlight-red">くします</mark>
+冷た<mark class="highlight-red">い</mark>　-＞　冷た<mark class="highlight-red">くします</mark></div></figure><p id="65a53dcf-0df9-478e-9743-4f8b9273ad6d" class="">
+</p><p id="7b710099-96b8-4850-9a0f-e1bec7f8720c" class="">テレビに音を大きくします。　<mark class="highlight-teal">// 把電視的聲音開大一點。</mark></p><p id="33f23668-7700-4b0f-b016-f69425631438" class="">安くしてください。    <mark class="highlight-teal">  //  請便宜一點。</mark></p><p id="fc2f0f42-5fe5-4fbc-9f35-cac86dd220db" class="">
+</p></li></ol><ol type="1" id="4101223e-6594-487c-9704-d4a5369ff841" class="numbered-list" start="3"><li> [な形容詞] +  になります　-＞　表示性質或狀態的變化<p id="2c91e9d2-4900-4378-b0a1-535967aa7909" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8dc57917-de15-4663-9734-9111070b8c15"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">簡単　-＞　簡単<mark class="highlight-red">になります</mark>
+元気　-＞　元気<mark class="highlight-red">になります</mark>
+綺麗　-＞　綺麗<mark class="highlight-red">になります</mark></div></figure><p id="6240f0a2-7c4c-4cec-b325-034145a4eb44" class="">
+</p><p id="31eb88f4-fb12-4a4f-9639-57597d2343b7" class="">陳さんは綺麗になりました。   //  陳女士變漂亮了。</p><p id="e269f9c6-f1cf-4513-baa6-c56a24151621" class="">もう元気になりました。           // 我已經恢復健康了。</p><p id="b578e603-22b8-46e9-a93a-f0db85f5140b" class="">
+</p></li></ol><ol type="1" id="76adb942-6a1a-4483-a526-30692faa6ea4" class="numbered-list" start="4"><li> [な形容詞] + にします　-＞　因主語的意志性動作或作用引起事物發生變化的時候使用</li></ol><p id="c700ff6d-47dd-463c-af73-5a209b8c4db7" class=""><div class="indented"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9cfaea10-d069-456d-8792-15647e324936"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">簡単　-＞　簡単<mark class="highlight-red">にします</mark>
+綺麗　-＞　綺麗<mark class="highlight-red">にします</mark>
+静か　-＞　静か<mark class="highlight-red">にします</mark></div></figure><p id="a2853178-8a8d-4e4d-a850-7cf2918a76c2" class="">
+</p><p id="7e105b84-5854-4f4d-8187-cc7b6e6cf375" class="">部屋を綺麗にします。   // 我把房間打掃乾淨。</p><p id="13e4ba15-e0f3-406f-aeef-4cd6eec07797" class="">静かにしてください。   // 請安靜。</p><p id="b8a9e862-9da9-44c8-a932-1fba23683950" class="">
+</p></div></p><p id="b0104a6e-ad7b-43ae-a317-12bdb1e8d83f" class="">5.    [名詞] + になります　-＞　表示性質或狀態的變化</p><p id="73080ce0-4e73-4dd2-925c-564420b7b1a7" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f01a6acb-de7d-4c9d-ab65-d41c0e072723"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">医者　　-＞　医者<mark class="highlight-red">になります
+</mark>五歳　　-＞　五歳<mark class="highlight-red">になります</mark>
+社会人　-＞　社会人<mark class="highlight-red">になります</mark></div></figure><p id="679e5286-88c2-474e-b1e0-c2a58db07c60" class=""><div class="indented"><p id="77db7548-307e-40c8-9d29-99ee56f91c3f" class="">将来は医者になりたいです。  <mark class="highlight-teal"> // 將來我想當醫生。</mark></p><p id="b3b6d2cb-b867-4be3-8255-f9e23f0151ab" class="">娘は今年三歳になりました。   <mark class="highlight-teal">// 女兒今年三歲了。</mark></p><p id="1e89234f-317d-4904-a272-bfd4f4c7595c" class="">
+</p></div></p><p id="c8ee71df-41e9-43c4-bbfc-f271e9bee5e1" class="">6.    [名詞] + にします　-＞　因主語的意志性動作或作用引起事物發生變化的時候使用</p><p id="5a13b414-42e1-4cc9-a5e9-5297182e900a" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fec3d0fa-332f-4c30-a864-b90ef9cb5225"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">半額　-＞　半額<mark class="highlight-red">にします</mark>
+禁煙　-＞　禁煙<mark class="highlight-red">にします
+
+</mark>*<mark class="highlight-red"> </mark>點餐、買東西等場合也常用</div></figure><p id="585beb3f-e103-451c-87db-95f1e3d4ea4f" class=""><div class="indented"><p id="538ab98e-29bd-4138-967f-f896fb51c652" class="">来週から会議室を禁煙にします。  <mark class="highlight-teal"> // 從下周起會議室實施禁菸。</mark></p><p id="27b2ff61-c91d-4193-8aa2-db365ba2ba0b" class="">私は蕎麦にします。王さんは？       <mark class="highlight-teal">// 我要點蕎麥麵。王先生呢?
+</mark>私はうどんにします。                    <mark class="highlight-teal"> // 我要點烏冬面。</mark></p><p id="b8a20859-4e05-4338-b455-af092dd9e5f8" class="">こちらの商品は、限定版です。      <mark class="highlight-teal">// 這個商品是限量版的。                                                        </mark>じゃあ、これにします。           <mark class="highlight-teal">      // 那麼，我要買這個。</mark></p><p id="5b1bd5e5-547b-4772-919c-1043636e7ecc" class="">
+</p></div></p><hr id="2ef1bf5c-a06a-4c58-af42-5f22b7fc823b"/><p id="24ad2a5c-524b-4c20-9065-c06be1047013" class="">
+</p><h2 id="5f7ab0d1-7ba4-4ce4-a670-6add2c7d54bd" class="">日語初級#29 | 動詞的辭書形（基本形）＋使用辭書形的三種語法</h2><p id="74ee3d02-f40d-4913-bd8b-6e0253a3c1f4" class="">
+</p><ol type="1" id="1048425c-7e0f-4905-8941-678f5c7d2420" class="numbered-list" start="1"><li> 動詞的辭書型 (基本型)    →   辭典中使用的型式<p id="36cd305d-ace4-4f5c-a941-57a2bb9f089c" class="">
+</p><figure id="6458b14e-bdcc-4c4f-84c9-a7e235317cd8" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7/Untitled%202.png"><img style="width:592px" src="sourse/6.png"/></a></figure><p id="f0422a25-d9ed-4c99-92c3-9f50413c426a" class="">
+</p></li></ol><ol type="1" id="cfaf00e3-bf86-4ed8-ab77-85f22fa1fb5a" class="numbered-list" start="2"><li> [動詞辭書型]  +  ことができます　-＞　會~~、能~~<p id="bfd66b5a-7954-49d9-8ae6-7365c3e2fad6" class="">
+</p><p id="bebc0b8b-5248-4d94-ba22-8082c99f7b5e" class="">彼はスペイン語を話す<mark class="highlight-red">ことができます</mark>。      <mark class="highlight-teal">// 他會講西班牙語嗎?</mark></p><p id="141d36ba-80b6-412b-9a71-0fe184e50a97" class="">インド料理を作る<mark class="highlight-red">ことができます</mark>。             <mark class="highlight-teal">// 你會做印度菜嗎?</mark></p><p id="b5e0721d-5027-48bb-b141-ec00cf760c6c" class="">はい、できます。                                        <mark class="highlight-teal">  // 是的，會做。</mark></p><p id="b3cdeb23-33ef-4684-a10c-d7848f701c14" class="">いいえ、できません。                                  <mark class="highlight-teal"> // 不，不會做。</mark></p><p id="4297aad2-999a-4876-9ba1-b6595e3a03ea" class="">
+</p></li></ol><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6985ef07-fbd5-481d-b45f-a67c12b58d6d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">⁂　也可以用名詞來代替。
+
+使用動詞 →  車を運転する<mark class="highlight-red">ことができます</mark>。
+使用名詞 →  車を運転<mark class="highlight-red">ができます</mark>。  </div></figure><p id="f6430fe4-3441-41f8-9622-885640ff22a8" class="">
+</p><p id="248d1b17-f288-4944-b823-acd0caf497cf" class="">3.    [名詞] + は + [動詞辭書型] + ことです　</p><p id="37f45cf4-47d8-4cbf-b4b4-a2a3ab753bed" class=""><div class="indented"><p id="5a513e53-8c58-462a-94bb-0555e19be4ac" class="">私の趣味はピアノを弾く<mark class="highlight-red">ことです</mark>。    <mark class="highlight-teal"> // 我的愛好是彈鋼琴。</mark></p><p id="671ade79-ce6f-475d-9ff5-b160d0c55166" class="">吉田さんの仕事はソフトウェアを開発することです。  <mark class="highlight-teal">// 吉田女士的工作是開發軟件。</mark></p><p id="c8ac4f69-1342-4570-a6cb-76f45a07ac0a" class="">張さんの夢は外国で働くことです。 <mark class="highlight-teal"> // 張先生的夢想是在外國工作。</mark></p><p id="9f87b735-0bd0-4ccd-9bf0-5d67d48f06a0" class="">
+</p></div></p><p id="d3e37970-ea87-4902-b004-9f9a84fca4e7" class="">4.    [動詞辭書型] + 前に<div class="indented"><p id="085204ad-ee37-4936-8cd7-9f9c81049904" class="">
+</p><p id="5520c1e5-7066-4678-a209-f3c348355da4" class="">毎日寝る前にお風呂に入ります。    <mark class="highlight-teal"> //  我每天睡前泡澡。</mark></p><p id="c83172d6-7bb0-4b89-967f-1eb9d6c91ff2" class="">食事をする前に手を洗わなければなりません。   <mark class="highlight-teal">// 用餐之前必須洗手。</mark></p><p id="9af3f1e5-5db3-4b0c-995d-1d2d7b0f65cc" class="">学校へ行く前にコンビニでパンを買いました。 <mark class="highlight-teal">  // 去學校之前在便利商店買了麵包。</mark></p><p id="63941021-efbc-4a19-ac55-ba59b394c104" class="">
+</p></div></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="cf5fab46-09e1-4843-a6f7-98f2cf6c3bc8"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">⁂　也可以用名詞來代替。
+
+使用動詞 →  食事をする<mark class="highlight-red">前に</mark>手を洗います。
+使用名詞 →  食事<mark class="highlight-red">の前に</mark>手を洗います。</div></figure><p id="2b2d702b-d9a1-482c-b63c-73c36274cc3c" class="">
+</p><hr id="1a8ec107-6de5-4ad6-b173-5bb7c837b453"/><p id="faa7f14e-c015-4c8d-b213-d56ae601e4a5" class="">
+</p><h2 id="48acdb96-8b4f-47e6-9e74-b59c75bf1826" class="">日語初級#30 | 動詞的た形變形規則以及用法</h2><p id="d6b5e261-2807-4aa8-897a-2b8aa7b2f79a" class="">
+</p><ol type="1" id="078f4a98-a746-48b6-ac0c-62f6a6d6c3b9" class="numbered-list" start="1"><li> 動詞的た型　 (て-＞た)<p id="cd12d9e8-1719-4832-a878-bb95c10af194" class="">
+</p></li></ol><figure id="9efc7cd0-fa5e-4b89-86cb-11e0d8a0a96b" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7/Untitled%203.png"><img style="width:863px" src="sourse/7.png"/></a></figure><p id="65a74fa0-7da5-406c-8d72-8fd4a2c815f3" class=""> </p><p id="a918e8a8-8b14-4b2c-964c-e57876a53f3b" class="">2.   [動詞た型] + ことがあります / ありません　</p><p id="28c6f87d-237b-42a0-a94b-b6a857edc615" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="aad75654-2a84-45ba-a7d3-713a2d21172f"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">表示<mark class="highlight-red">過去</mark>的經驗。等於中文的「(曾經) ~過 」，通常用於<mark class="highlight-red">至少半年以前</mark>發生的事情，不會用於離現在很近的以前的經驗。
+
+✕   先週日本へ行ったことがあります。
+O   先週日本へ行きました。</div></figure><p id="b65f53ef-96a5-4cc1-b372-8184af79c501" class=""><div class="indented"><p id="4ab4f9f3-9f25-4383-807f-a15711a92ed7" class="">私はこの映画を見たことがあります。     <mark class="highlight-teal">  // 我看過這部電影。</mark></p><p id="195c1b56-7211-4d3c-ab05-45f4f68002d0" class="">私は見たことがありません。                    <mark class="highlight-teal"> // 我沒看過。</mark></p><p id="ce9c5917-dc42-45fc-93de-7b9685593058" class="">劉さんは寿司を食べたことがあります。   <mark class="highlight-teal">// 劉女士吃過壽司嗎?</mark></p><p id="0b456f20-d78d-4191-a437-0fb1018c3f29" class="">はい、あります。                                      <mark class="highlight-teal"> // 是，吃過。</mark></p><p id="5bba5939-fddf-4b23-ba29-d335821ed563" class="">いいえ、ありません。                               <mark class="highlight-teal"> // 不，沒有。</mark></p><p id="92bb58e8-e826-4553-91fc-d77b8fb2eb45" class="">
+</p><hr id="c4876848-39f7-4014-858d-2157ea806e4d"/></div></p><p id="9fb289ee-2a2e-485d-9948-0668d5f331b7" class="">
+</p><h2 id="f8a68c85-95d6-4c99-820d-201a9ac6a1b4" class="">日語初級#31 |　使用動詞た形的三種語法</h2><p id="63dd90f0-6990-4ebe-aab3-1226232b0662" class="">
+</p><ol type="1" id="94f51b4b-04a7-4871-990d-dfcdd017d9da" class="numbered-list" start="1"><li> [動詞た型] +  後で　-＞　表示一個動作在另一個動作之後發生<p id="76f28634-991e-4e0c-afdb-7e9d65aefee4" class="">
+</p><p id="dfd24b23-8fce-490b-92e7-24d683cbc5b6" class="">毎日授業が終わった後で映画を見ます。   <mark class="highlight-teal">// 我每天下課後看電影。</mark></p><p id="888341f7-7e12-43ae-a9a3-16697ea82ad0" class="">映画を見た後で食事をしましょう。         <mark class="highlight-teal"> // 看完電影後吃飯吧!</mark></p><p id="71fb59d5-5eeb-412e-8924-8852c22de698" class="">
+</p></li></ol><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3b89d79b-ef9d-4326-aaf6-2e3a70bfd71f"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">這個句型也可以以 <mark class="highlight-red">[名詞] の後で</mark>的形式使用
+
+使用動詞 → 授業が終わった後で映画を見ます。
+使用名詞 → <mark class="highlight-red">授業の後で</mark>映画を見ます。</div></figure><p id="650ee9fa-fffc-4bc1-8f25-2fb945cf356a" class="">
+</p><p id="044108f6-f1db-45ca-93b1-655f313f639a" class="">2.   [動詞た型] + ほうがいいです　-＞　進行選擇時使用，建議對方做理想動作，句尾多加よ<div class="indented"><p id="dc8848f3-8e6c-4a6a-91c0-f3646123f7ea" class="">
+</p><p id="b93347db-828a-4cc7-b705-6fbf0cbed029" class="">忘れたほうがいいですよ。               <mark class="highlight-teal"> // 你還是忘了比較好。</mark></p><p id="65ca5c56-6952-4f17-9d15-241b6ff618e9" class="">お酒を飲まないほうがいいですよ。 <mark class="highlight-teal">// 你最好別喝酒了。</mark></p><p id="cd46136d-a8e5-4f97-be4d-0d61b4894e04" class="">毎日八時間寝たほうがいいですか。 <mark class="highlight-teal">// 每天睡八小時比較好嗎?</mark></p><p id="78c4faac-a0a6-499a-90e7-1d74c7a8f6e1" class="">はい、そのほうがいいです。          <mark class="highlight-teal">  // 是的，那樣比較好。</mark></p><p id="8785b9fd-21de-4b37-85d0-22baf2c3f93c" class="">
+</p></div></p><p id="769b5b81-91ee-4d29-a624-563c92ffd846" class="">3.   [動詞た型] + り + 動詞た型 + り　-＞　舉例有代表性的動作使用</p><p id="3c4b528e-b8ec-4367-b6d3-5f37b143a868" class=""><div class="indented"><p id="0d2f1721-edea-41cd-b2b2-8b695d5d42bf" class="">毎週土曜日に、散歩したり買い物に行ったりします。     <mark class="highlight-teal">// 每周六，有時去散步，有時去買東西。</mark></p><p id="45909054-ef24-4c21-aa0a-7b8c23b2515a" class="">ゴールデンウイークには、家の掃除をしたり洗濯をしたりします。   <mark class="highlight-teal">// 黃金周的時候，打掃打掃房間，洗洗衣服。</mark></p><p id="af47e380-fc5b-4739-bd31-98ef387a8632" class="">
+</p><hr id="89e1a08d-906f-4b93-9a5d-55b0967f5087"/><p id="6c72563c-f22e-4a58-ae52-7fa2050f74a2" class="">
+</p></div></p><h2 id="7f3e57b4-5802-4da3-a766-544d73180a2e" class="">日語初級#32 | 表示情况・狀態有多種可能性的語法～り～り、～によって</h2><p id="27993bf5-b37e-4304-bdd0-fc88884c3384" class="">
+</p><ol type="1" id="3d952216-fdbe-4ebc-aeef-69bf590c36cc" class="numbered-list" start="1"><li> ~り～り<p id="e51f7d96-2cd9-4b65-9a8a-2f9b014685c8" class="">結婚式のやり方は国によって違います。  <mark class="highlight-teal"> // 結婚典禮的形式因國別而異</mark></p><p id="26d13e7e-0def-4fab-8524-39df94543b20" class="">人によって考え方が違います。  <mark class="highlight-teal">// 人不同想法也不同。</mark></p><p id="5aaef8fe-5dde-4564-8069-c7793befc977" class="">安藤さんは毎日忙しですか。 <mark class="highlight-teal"> // 安藤先生每天都很忙嗎?</mark></p><p id="617db405-7ede-4ccf-a401-6adc80057c19" class="">いいえ、日に<mark class="highlight-red">よります</mark>。    <mark class="highlight-teal"> // 不，要看是哪一天。</mark></p><p id="5e9973d4-b4d2-44ea-ba06-f5e77cc3388c" class="">
+</p></li></ol><ol type="1" id="16a0cf32-375a-42bb-b058-d5ed73de7560" class="numbered-list" start="2"><li> [名詞] + によって　-＞　根據~ (不同)<p id="c85254b6-2e11-4572-a371-139a89dba27f" class="">
+</p><hr id="f31d1943-a7a1-490f-a725-ecc72cc1a1a3"/></li></ol><p id="8908abaf-e001-466c-8b9a-e97ab05db3b9" class="">
+</p><h2 id="971ed31e-3338-4a2e-baaf-6d29736a4128" class="">日語初級#33 | は和が該怎麼區分</h2><p id="5d49ed10-919d-4ff8-8e54-5034adf7c340" class="">
+</p><ol type="1" id="05007d93-7f46-4e87-8b62-ba633f0c084d" class="numbered-list" start="1"><li> <mark class="highlight-blue">新訊息</mark> or<mark class="highlight-yellow"> 舊訊息</mark></li></ol><p id="649e7e68-08a7-418f-aab6-f606f302e5dd" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a25cd9c7-afa6-4b04-88bb-4fafefe41f87"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">名詞 (舊訊息) は 名詞 (新訊息)。
+名詞 (新訊息) が 名詞 (舊訊息)。</div></figure><p id="15ada417-1ee7-486e-832c-d162e92f74d2" class=""><div class="indented"><p id="51c7b1e9-974e-494f-a421-c027f227e44f" class=""><mark class="highlight-yellow">豊田社長</mark>は<mark class="highlight-blue">どの方</mark>ですか。    <mark class="highlight-teal">// 豐田社長是哪位 ?</mark></p><p id="4e9abf3a-8df2-449f-a395-ff62842e2d6b" class=""><mark class="highlight-yellow">豊田社長</mark>は<mark class="highlight-blue">あの方</mark>です。     <mark class="highlight-teal">   // 那位是豐田社長。</mark></p><p id="e8b89c34-399f-4008-abdb-911c21ef82a2" class=""><mark class="highlight-blue">あの方</mark>が<mark class="highlight-yellow">豊田社長</mark>です。    <mark class="highlight-teal">    // 豐田社長是那位。</mark></p><p id="b68c8ad5-2623-47bd-aef3-3f1d3329d474" class="">
+</p></div></p><p id="2fd3a24f-c7bf-4a97-97aa-f8a4af43a84e" class=""> 2.   判斷 or 敘述</p><p id="8c9ee6c4-82d8-4500-bdb2-20eeba49777e" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="44bc01e8-0b77-4d54-9eb4-0915dee99c25"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">敘述直接觀察到的某事物時使用 が。
+關於某事物說話，說話人加上主觀判斷表示時使用 は。</div></figure><p id="7e2b7ca2-28c5-47b7-a90a-65c0cf992d5f" class=""><div class="indented"><p id="c3d681b8-04fa-4bc2-baf8-d1db03846976" class="">子供が公園で遊んでいます。  <mark class="highlight-teal">// 孩子在公園玩。</mark></p><p id="6c8eb663-60ff-4598-aab5-f8176bee5e3a" class="">それは私の傘です。    <mark class="highlight-teal">  // 那是我的傘。</mark></p><p id="1c866330-baaf-4ff4-ab22-ed7b59e9ab84" class="">
+</p></div></p><p id="42dea29b-3c0d-408c-a3c6-f0af9393b549" class=""> 3.   一個人 or 幾個人</p><p id="d586a47b-1e2e-46ae-93d3-7616c6ec45d3" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="38a3f199-9e23-49e9-93bf-b1782d9c8cd5"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">前後兩個小句的主格式同一個人的話使用 は。
+不是一個人的話使用 か。</div></figure><p id="d9eb90e8-2e85-4e22-b885-e26f41ebca24" class=""><div class="indented"><p id="1ece9aee-30ee-4de1-95e3-2a618ac6bde8" class="">弟は家で勉強するとき、いつも音楽を流します。    <mark class="highlight-teal">// 我弟弟在家學習時，每次放音樂。</mark></p><p id="fafabcd5-d505-4bd5-8c46-14e3f91c5e05" class="">姉がドラマを見るとき、私も一緒に見ます。   <mark class="highlight-teal">// 我姐姐在看電視劇的時候，我也一起看。</mark></p><p id="c10a5926-2389-41cc-9d07-39da00149f8a" class="">
+</p></div></p><p id="d50fd583-c726-4a5f-b6a8-d99330d2c39c" class=""> 4.   對比 or 排他</p><p id="3a05f6cf-a2da-4136-8973-499202e0bde5" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="866946d0-289b-40c0-a2f8-6c910efeffde"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">含有對比的意思使用 は、排他時使用か。</div></figure><p id="c58e9ec2-4548-4d70-b940-0464a55b800b" class=""><div class="indented"><p id="15b9344e-8e29-4ae9-9453-f67e3d18d1f2" class="">犬は好きですが、猫は嫌いです。        <mark class="highlight-teal"> // 我喜歡狗，但不喜歡貓。</mark></p><p id="b07016ce-056b-46a5-b298-b52df2ace1de" class="">日本の本を読んだことがありますか。  <mark class="highlight-teal">// 有沒有看過日本的書?</mark></p><p id="a69cc324-c36b-4241-8347-bee4c5bfd894" class="">日本の漫画は読んだことがあります。  <mark class="highlight-teal"> // 我看過日本的漫畫 (但沒有看過其他日本的書)</mark></p><p id="aebc0194-47aa-4e5b-b666-2409a2e89a3d" class="">
+</p><p id="cc91ae51-5c9e-4490-a877-6b888c146d0a" class="">店長を呼んでください！   <mark class="highlight-teal">// 請叫店長! </mark></p><p id="194558d8-14df-4059-aadb-b3963fc1babe" class="">私は店長です。               <mark class="highlight-teal">   // 我就是店長。</mark></p><p id="ad2f3f55-4a28-48fd-9464-984d06020722" class="">
+</p></div></p><p id="f7788c1e-3f5d-4c1a-861c-50b9d9947e4c" class=""> 5.   正常 or 特殊<div class="indented"><p id="1a411850-29fe-403d-ae4e-e3a53fd25d1b" class="">
+</p></div></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="58d77ad4-cb78-4361-bb7c-58d49613dbcc"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">表示正常情況、狀態時使用 は。
+表示特殊情況、狀態時使用 か。</div></figure><p id="020b94bb-5698-4309-89e0-3039e59dd061" class=""><div class="indented"><p id="4e485595-e2e7-4191-8c4a-08b50b04733a" class="">地球は丸い。     <mark class="highlight-teal">// 地球是圓的。</mark></p><p id="8063f2c2-15da-45ce-beb8-6c0b4f636f70" class="">顔が赤いですよ。大丈夫ですか。 <mark class="highlight-teal">  // 臉紅阿。沒問題嗎?</mark></p><p id="e20a7ba8-4d39-4bc2-bcf3-d0bc999b2120" class="">
+</p></div></p><hr id="1102fe56-2ef6-4b83-bde2-9d07deacf060"/><p id="35785218-c0c0-41ed-8ed5-465a413c8f22" class="">
+</p><h2 id="954fde94-a190-46c7-a33a-875026ed469c" class="">日語初級#34 | 簡体形（動詞、い/な形容詞、名詞）</h2><p id="f282b617-2ffa-4429-9347-05ef170b8da1" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="23862d22-358c-4b8d-8584-71e2326e4ba5"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>敬體型</strong> : 對陌生人、長輩、關係不太親密的人使用的形式。
+eg.  明日、学校へ行きますか。いいえ、行きません。
+
+<strong>簡體型</strong> : 對同輩或晚輩、關係特別親密的人使用的形式。
+eg.  明日、学校、行く？　ううん、行かない。</div></figure><p id="dd31a175-0c9e-4226-a127-dd39442e871f" class="">
+</p><ol type="1" id="1fa46ad1-7063-4c8c-b492-c191af866212" class="numbered-list" start="1"><li>動詞的簡體形<p id="5942a7ba-a191-49da-b02e-fcd881afd7e2" class="">
+</p><figure id="55fcbdc8-6a8e-43d3-88ae-e40580f4948b" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7/Untitled%204.png"><img style="width:960px" src="sourse/8.png"/></a></figure><p id="df6e710b-8796-49c1-8525-bf7eceb48b6e" class="">
+</p><p id="fa44ad1b-2f1d-488d-a2f6-796411175e45" class="">お土産、買った？  (買いましたか。)</p><p id="60471261-3689-40c3-bf5b-149302fe7a9b" class="">うん、買った。(買いました)</p><p id="8305e994-0af3-4107-8e59-ebde58093498" class="">ううん、買わなかった。（買いませんでした）</p><p id="ad4ecba7-c99f-4710-a869-405e54aade8d" class="">
+</p></li></ol><ol type="1" id="2b345d9a-b32a-441f-987b-989eb67ebaeb" class="numbered-list" start="2"><li> い形容詞的簡體型<p id="f639c286-3a54-43f0-aba4-d5aca87138d6" class="">
+</p><figure id="0d292529-9555-4e37-b776-15ddc187cecb" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7/Untitled%205.png"><img style="width:960px" src="sourse/9.png"/></a></figure><p id="36e193ee-4e66-4168-900e-5334a8fd8d3a" class="">
+</p><p id="86843e73-81fe-4c84-a40b-08abb611836d" class="">暑い？　 (暑いですか。)</p><p id="c33e54c7-8e53-49c6-b073-9aeb2ffa04f9" class="">うん、暑い。（暑いです）</p><p id="22b12364-0abb-4e3f-a54b-d9530a40be24" class="">ううん、暑くない。（熱くありません。）</p><p id="30d91a16-fe8f-498c-80b8-d25666a38f1f" class="">
+</p></li></ol><ol type="1" id="34a70ea2-75e0-4de4-ac39-60da6af53481" class="numbered-list" start="3"><li> な形容詞的簡體形<p id="5c169220-baa0-4bd2-8af7-2662f2550cd3" class="">
+</p><figure id="63cf8f6a-73e1-4312-8900-2c9ba4e5a553" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7/Untitled%206.png"><img style="width:834px" src="sourse/10.png"/></a></figure><p id="61bfe90d-4cf8-4642-9de1-2acf06d1dcbf" class="">
+</p><p id="663dc22c-8ce4-481f-a5da-6c417d4d3ac7" class="">試験、簡単だった？（簡単でしたか。）</p><p id="863b0f45-8bd3-463d-a2b5-51aa7ffce61f" class="">うん、簡単だった。（簡単でした。）</p><p id="405b5762-d7ab-4f1e-9524-802a9efa68ef" class="">ううん、簡単じゃなかった。（簡単じゃありませんでした。）</p><p id="78f77890-7827-42d5-899e-070bbb869792" class="">
+</p></li></ol><ol type="1" id="64d53074-08e4-4c9a-a5e9-7e913239213d" class="numbered-list" start="4"><li> 名詞的簡體形<p id="087cb866-567c-4813-9d09-0248a16b1539" class="">
+</p><figure id="9e7b1e5c-0b46-4ec5-a153-e59b8651f30c" class="image"><a href="%E6%97%A5%E6%96%87%E7%AD%86%E8%A8%98~~~%2048538a1a6e74422ea94178632e604dd7/Untitled%207.png"><img style="width:804px" src="sourse/11.png"/></a></figure><p id="2e416ca0-d745-4596-8731-c038e0508692" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="217e48fd-622d-4279-ba52-4739fb1a41f3"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">名詞的簡體形規則與な形容詞的規則是一樣的!!!</div></figure></li></ol><p id="1608170d-d27c-41bf-bad5-89fadde66bc5" class="">
+</p><hr id="2d95c844-651a-48a4-9fae-a238526d4406"/><p id="52f3421e-6430-4149-915d-7486d3e97b73" class="">
+</p><h2 id="2714dcdb-6250-4086-8f57-8312255f173b" class="">日語初級#35 | 使用簡體形語法 小句＋かどうか、疑問詞小句＋か</h2><p id="78bae826-9cfa-4eb4-a663-f460c4d366c5" class="">
+</p><ol type="1" id="074c1d7f-3c23-4dd5-bd57-c38a9d255aa6" class="numbered-list" start="1"><li> 小句 + かどうか<p id="573e5f08-81cb-472f-8171-7130c0e2975b" class="">
+</p><p id="5b4f3849-c1ac-41f4-b028-effab53f9132" class="">Q : この料理は辛いですか。      <mark class="highlight-teal"> // 這道菜辣不辣 ?</mark></p><p id="80cf5480-8c28-497b-ab41-3b995944b410" class="">A : 辛いですか。私は知りません。</p><p id="73cac189-ffed-4cf4-a1ba-3d83214c61c2" class="">-＞辛い<mark class="highlight-red">かどうか</mark>知りません。 <mark class="highlight-teal"> // 我不知道辣不辣。</mark></p><p id="fa8fc598-17d9-4a97-9f58-ed0e0fd09af4" class="">
+</p><p id="dd165fe8-0d77-41e6-82f5-f902dd0337be" class="">部屋は清潔ですか。知りません。    </p><p id="310c8c40-73b4-400a-bde2-c416a8c2b03c" class="">-＞部屋が清潔<mark class="highlight-red">かどうか</mark>知りません。  <mark class="highlight-teal"> // 我想知道房間乾不乾淨。</mark></p><p id="6949099b-18d4-4754-b17d-592bce40596b" class="">
+</p><p id="cd8105df-4c5f-4e2f-96c8-591f9b3714e1" class="">今年の夏、九州へ行きますか。わかりません。</p><p id="336f8a19-1663-4e66-862d-960dc76d05a4" class="">-＞今年に夏、九州へ行く<mark class="highlight-red">かどうか</mark>わかりません。   <mark class="highlight-teal"> // 我今年夏天去不去九州地區，還不知道。</mark></p><p id="6a93e6bf-777d-4291-9d82-d12a3c18e9cf" class="">
+</p></li></ol><ol type="1" id="b69d10ba-278c-40e2-8282-f52232aab015" class="numbered-list" start="2"><li> 疑問句小句 + か<p id="50b2b290-940b-40e5-8a84-ad2e233e8f14" class="">
+</p><p id="4eff9621-5152-4c9f-936f-f90bab2fa149" class="">Q : どの料理が辛いですか。    <mark class="highlight-teal">// 哪道菜辣 ?</mark></p><p id="d3f0e403-fd1f-4c5c-939b-30846b0da885" class="">A : どの料理が辛いですか。知りません。</p><p id="71990438-a7a4-411f-aa54-9f888c72bcf4" class="">-＞<mark class="highlight-red">ど</mark>の料理が辛い<mark class="highlight-red">か</mark>知りません。   <mark class="highlight-teal">// 我不知道哪道菜辣 ?</mark></p><p id="64fa7771-c3f3-4489-9ae9-a936601f8c95" class="">
+</p><p id="58ab7d0f-71f6-4e5b-980a-6b7101a0b575" class="">Q : 今朝何を食べたましたか。<mark class="highlight-teal">  // 今早吃什麼了?</mark></p><p id="4bda60c0-d10f-4c18-8a1f-2b23698fa042" class="">A : 何を食べましたか。忘れました。</p><p id="73babd02-a0a3-4bf3-ad32-76690b0809cb" class="">-＞<mark class="highlight-red">何</mark>を食べた<mark class="highlight-red">か</mark>忘れました。  <mark class="highlight-teal">// 我忘記今天早上吃什麼了。</mark></p><p id="4a522159-8c7d-4d5e-961d-17996e9ff582" class="">
+</p><p id="fd9fe0c6-1cd7-4b33-9e76-9e6c87656acf" class="">Q : 誰の部屋が一番きれいですか。   <mark class="highlight-teal">// 誰的房間最乾淨 ?</mark></p><p id="adc61f5d-78f3-4503-8789-9d80159596e8" class="">A : 誰の部屋が一番きれいですか。わかりません。</p><p id="d6ad1151-be72-4453-8271-bac0d8457340" class="">-＞<mark class="highlight-red">誰</mark>の部屋が一番きれい<mark class="highlight-red">か</mark>わかりません。  <mark class="highlight-teal">// 誰的房間最乾淨，我還不知道。</mark></p><p id="b08ecac7-c2a1-4f42-a3d2-51102a33f416" class="">
+</p></li></ol><hr id="efd1f2e5-6101-4373-8864-af22db3b48c6"/><p id="edd6ea03-e695-4f52-9d3f-21066478d45d" class="">
+</p><h2 id="53e892d3-0cdc-4ee9-85d2-fc711680e0d6" class="">日語初級#36 | ～と思う、～と言う的用法 </h2><p id="51d91ac6-6c65-4f7c-92b7-8a9c211ad9b8" class="">
+</p><ol type="1" id="605c6950-ea7e-4ba2-b31f-85563320801e" class="numbered-list" start="1"><li> 小句 + と思う　-＞　表示說話人的思考內容時使用。等於中文的「我想~」「我覺得」<p id="1664fda9-a013-43d0-af32-b6cf58fe74f0" class="">
+</p><p id="5d317a76-00f0-4d3e-a3d0-8e106b75cd6f" class="">先生はもうすぐ来る<mark class="highlight-red">と思い</mark>ます。  <mark class="highlight-teal"> // 我想老師馬上就來。</mark></p><p id="daf07641-97d6-4111-a947-1948657636fa" class="">あの映画はとてもおもしろい<mark class="highlight-red">と思い</mark>ます。   <mark class="highlight-teal">// 我覺得那部電影很有意思。</mark></p><p id="9953f05a-c92f-4959-a8ac-4b80ad3de2f4" class="">富士山はきれいだ<mark class="highlight-red">と思い</mark>ます。  <mark class="highlight-teal">// 我覺得富士山很美。</mark></p><p id="546a950f-0f99-4c32-9927-2fa1167d8ea5" class="">山下さんは美人だ<mark class="highlight-red">と思い</mark>ます。  <mark class="highlight-teal">// 覺得山下女士是個美女。</mark></p><p id="358a2f02-e956-4503-a0c6-b72567f4996f" class="">
+</p><p id="dda600e2-5ca2-4146-a2b5-f0cb26ce280f" class="">四川料理は辛い<mark class="highlight-red">と思い</mark>ますか。 <mark class="highlight-teal"> // 我覺得四川菜辣嗎?</mark></p><p id="afccb800-babf-4006-9519-bc0e1a689514" class="">最初はとても辛い<mark class="highlight-red">と思い</mark>ました。 <mark class="highlight-teal"> // 最初的時候，我覺得很辣。</mark></p><p id="d0f22b5d-ccaf-4f92-a3f7-e473699b32e9" class="">でも、今は辛い<mark class="highlight-red">と思い</mark>ません。  <mark class="highlight-teal">// 但是現在我不覺得辣。</mark></p><p id="5475956a-205e-4736-91dd-077fc37bb8b5" class="">　</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5d922541-9cd0-4d85-8e89-4b5c2a8d56e2"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">小句的最後部分 (と前面) = 簡體形</div></figure><p id="085fe1cf-263d-4984-be35-5f88858826ce" class="">
+</p></li></ol><ol type="1" id="22a7d9ad-acc7-4c65-b75f-1d3225a3fa2e" class="numbered-list" start="2"><li> 小句 + と言いました<p id="8831581c-9aa2-471c-b172-fa2a674dc3da" class="">
+</p><p id="6e4f24e7-6c62-439e-9ab8-e55fc90c9696" class="">兄は今日からダイエットを始める<mark class="highlight-red">と言いました</mark>。<mark class="highlight-teal">  // 哥哥說從今天開始減肥。</mark></p><p id="85d9ce81-e0b7-45cb-bffd-426b29e94b52" class="">太田さんは、今回の試験は簡単だった<mark class="highlight-red">と言いました</mark>。 <mark class="highlight-teal"> // 太田先生說這次的考試很簡單。</mark></p><p id="45a71702-9303-4aaa-8f78-0ec2f81732ad" class="">私は上司に残業したくない<mark class="highlight-red">と言いました</mark>。 <mark class="highlight-teal"> // 我跟上司說不想加班。</mark></p><p id="0b523046-484f-419c-a9bf-d1da52e7afb1" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="364ebf31-3744-46d9-93b8-ec8368ebaa2a"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">反覆說的話，用　~と言っています
+
+山下さんは新しいカメラが欲しい<mark class="highlight-red">と言っています</mark>。</div></figure><p id="829de808-23d5-43e4-bfc4-219cee2d18ca" class="">
+</p></li></ol><hr id="e77ab6f8-3e9c-4e79-b6d0-c43239851476"/><p id="af4b7ba2-249e-4296-9e7e-0eb7fa286308" class="">
+</p><h2 id="4e664f4f-f166-4e0b-b41a-589a7f796a60" class="">日語初級#37 | 自動詞vs他動詞 用法以及區别方法</h2><p id="583820e6-7cf9-465c-b6a3-379b15d5fd0a" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f37089ed-4486-4cce-a89e-82b5ca1f9f31"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>他動詞</strong> → 描述一種動作或行為。具有<mark class="highlight-red">主語作用於賓語而使其發生變化</mark>的含意。
+例, （私は）ドアを閉めました。 <mark class="highlight-teal"> // (我)關門了</mark>
+
+<strong>自動詞 </strong>→ 描述一種現象或狀態。不帶賓語的動詞，表示不考慮外力影響的情況下，主語<mark class="highlight-red">自主地進行動作</mark>，或自然地發生變化。
+例, ドアが閉まりました。  <mark class="highlight-teal">// 門關了</mark></div></figure><p id="cae2fb21-c48a-4f9d-b717-9273bdc093a7" class="">
+</p><ol type="1" id="3680cdd9-c5b6-44b2-ba06-9808e806ad61" class="numbered-list" start="1"><li> 用法~<p id="7e22b68a-cb27-461d-b9be-149efca3ba13" class="">
+</p><p id="921102f3-65f3-4eb7-b186-3c3db753c8c4" class="">ドア<mark class="highlight-red">を</mark>閉めました。     <mark class="highlight-teal">// 關門了。</mark></p><p id="d0d77b6c-deb0-450c-a667-7ad471781a83" class="">ドア<mark class="highlight-red">が</mark>閉まりました。  <mark class="highlight-teal">// 門關了。</mark></p><p id="3eafd9d9-a355-4260-88a4-e520a7be1a9a" class="">
+</p><p id="b9fb7fef-3a3a-421e-9b59-167798971e39" class="">室温<mark class="highlight-red">を</mark>下げます。    <mark class="highlight-teal">// 把室溫調下。</mark></p><p id="ac7090fc-8608-406c-8c0e-26b494af2acb" class="">室温<mark class="highlight-red">が</mark>下がります。 <mark class="highlight-teal">// 室溫下降。</mark></p><p id="4bb374cd-6bb9-4b58-bf9f-e15c69a97886" class="">
+</p><p id="b5f6362e-7fb5-4f91-b4ae-46d073051761" class="">髪<mark class="highlight-red">を</mark>伸ばしたいです。 <mark class="highlight-teal"> // 我想把頭髮留長。</mark></p><p id="f9b48b00-7c61-45ae-b449-7b101c3445fc" class="">髪<mark class="highlight-red">が</mark>伸びました。       <mark class="highlight-teal"> // 頭髮長了。</mark></p><p id="68f25edf-83c5-4d41-8dd2-2d136ae95cd7" class="">
+</p><p id="95c114fc-f501-49a2-8f19-9c124e11bdd5" class="">授業<mark class="highlight-red">を</mark>始めます。       <mark class="highlight-teal">  // 開始上課。</mark></p><p id="0d1204c0-0218-4251-9c48-ca11ca2706a6" class="">もう始まりましたか。   <mark class="highlight-teal">// 已經開始了嗎。</mark></p><p id="62483527-2335-418e-85f8-fc73ad75aacf" class="">
+</p><p id="d97615aa-b38a-4bc4-a5d8-97ea4dfa2f1f" class="">パソコン<mark class="highlight-red">が</mark>壊れました。 <mark class="highlight-teal">  // 電腦壞掉了</mark></p><p id="081909ba-1534-4ed7-8387-7dc5fdfc8e8a" class="">パソコン<mark class="highlight-red">を</mark>壊しました。<mark class="highlight-teal">  // 我把電腦用壞了。</mark></p><p id="c41b6a78-bdb1-4358-9fbf-d96c34a9020d" class="">
+</p></li></ol><ol type="1" id="84cb8672-17f8-4895-ba4c-3f600381f77d" class="numbered-list" start="2"><li> 分別方法<p id="f11c237d-093d-4c13-85b3-d20bee3ac00a" class="">
+</p><p id="0c8dffd3-c91a-4b8b-bae4-ed8fa5b14769" class="">對應關係 　→  ドアを<mark class="highlight-red">閉める</mark>　ドアが<mark class="highlight-red">閉まる</mark></p><p id="14fa69f3-4602-42b4-a4a0-c9ab916e0b55" class="">沒有對應關係的自動詞 　→ 雨が<mark class="highlight-red">降る</mark>　音が<mark class="highlight-red">聞こえる</mark></p><p id="e8366977-0b84-4822-a555-9e1f64ad488a" class="">沒有對應關係的他動詞 　→ 本を<mark class="highlight-red">読む</mark>　水を<mark class="highlight-red">買う</mark></p><p id="42d156e5-6b71-4289-bea0-cb9e7133f17e" class="">同一 　→　授業を<mark class="highlight-red">再開する</mark>　授業が<mark class="highlight-red">再開する</mark></p><p id="6b0f640f-8002-4130-a218-9de94546a99a" class="">
+</p></li></ol><ol type="1" id="332e3276-c70c-40e3-a682-d2e2d2981a1c" class="numbered-list" start="3"><li> 十大規則~<p id="d4b96f0d-542b-4c06-a423-cdea044ec15b" class="">
+</p><ol type="1" id="c3fb068e-d19e-4698-8dc3-762b94cca7f0" class="numbered-list" start="1"><li> 自動詞-eru → 他動詞-asu<p id="a94a9ddc-92a2-4aa9-9dfb-6ba1f6315496" class="">
+</p><p id="8811677a-f59e-4c56-be2a-89b375ec3cf9" class="">水が出る　    <mark class="highlight-teal">// 水出來　</mark>　　　水を出す        <mark class="highlight-teal"> // 放水</mark></p><p id="ab3855ef-9bc5-4290-8de8-dbda64b1e15a" class="">髪が濡れる　<mark class="highlight-teal">//  頭髮溼　</mark>　　　髪を濡らす     <mark class="highlight-teal">// 把頭髮弄溼</mark></p><p id="38eb6eb8-e9b8-4c32-80bf-2254dc99a9c3" class="">
+</p></li></ol><ol type="1" id="a1897c59-b8a2-4ac8-88bb-32839c1e93dc" class="numbered-list" start="2"><li> 自動詞-eru → 他動詞-yasu<p id="e57a71a7-9319-4743-8c27-c55073df3fa5" class="">
+</p><p id="7492374d-7848-47c5-80b5-836db7a76aa1" class="">体重か増える      <mark class="highlight-teal"> // 體重增加</mark>　　体重を増やす　    <mark class="highlight-teal">// 增加體重</mark></p><p id="d02abddb-0015-47b5-9fd9-bf9e376357ba" class="">ビールが冷える   <mark class="highlight-teal">// 啤酒很冰　　</mark>ビールを冷やす    <mark class="highlight-teal">// 把啤酒弄冰</mark></p><p id="db06aaf8-4736-406e-a99a-028891720245" class="">
+</p></li></ol><ol type="1" id="f1ebdf53-5c67-43aa-9601-23a0ca4362b7" class="numbered-list" start="3"><li>自動詞-iru → 他動詞-osu<p id="bb1aba88-d67e-486a-a8bd-942cfa728e9c" class="">
+</p><p id="1918a850-f2fc-4577-b116-7be3c6449e2b" class="">子供が起きる    <mark class="highlight-teal"> // 小孩起床</mark>　　子供を起こす     <mark class="highlight-teal"> // 叫小孩起床</mark></p><p id="5b6eaf29-37c8-4259-9fd1-d62d966895b3" class="">財布が落ちる    <mark class="highlight-teal"> // 錢包掉落</mark>　　財布を落とす      <mark class="highlight-teal">// 把錢包弄掉</mark></p><p id="27f97ea8-ac4a-4a1c-ad50-7167d535ee1a" class="">
+</p></li></ol><ol type="1" id="49790e5c-9c88-45b3-93e3-64933ded8838" class="numbered-list" start="4"><li>自動詞-u → 他動詞-asu<p id="bb0f3aab-467a-4b93-973e-7f0c0163751f" class="">
+</p><p id="4be8f0e7-f901-440f-9d63-ecc5a979900c" class="">服が乾く     <mark class="highlight-teal">// 衣服乾</mark>　　　服を乾かす   <mark class="highlight-teal"> // 把衣服弄乾</mark></p><p id="83d672bb-d05b-4f4b-9e09-9ea4ac7609d1" class="">足が動く     <mark class="highlight-teal">// 腳在動　</mark>　　足を動かす    <mark class="highlight-teal">// 動一下腳</mark></p><p id="823518f9-d510-4b4a-b9c1-a53cf9bebbf3" class="">
+</p></li></ol><ol type="1" id="0de2f253-906e-4138-a5df-eda5bc41b7ae" class="numbered-list" start="5"><li>自動詞-u → 他動詞-eru<p id="9775199a-539c-4ab7-b18a-c49b17754535" class="">
+</p><p id="74437914-6aeb-400f-a82e-3c916ee35164" class="">店が開く　   <mark class="highlight-teal">// 店開了　　　　</mark>店を開ける       <mark class="highlight-teal">// 去開店</mark></p><p id="592f36f9-e1d1-4a43-8a05-93ad2b533233" class="">ビルが建つ <mark class="highlight-teal">  // 大樓建好了　</mark>　ビルを建てる  <mark class="highlight-teal">  // 建一棟大樓</mark></p><p id="8f8acf02-cd14-43b6-bd65-507b8e49daa6" class="">
+</p></li></ol><ol type="1" id="e33f95fd-31a3-4236-b767-0995139fb6d0" class="numbered-list" start="6"><li>自動詞-ru → 他動詞-su<p id="f424312c-e361-44cc-b51b-e2c251b9c69d" class="">
+</p><p id="80a7af0e-2ee0-47b9-9303-c72bdcdaa956" class="">学生が家に帰る   <mark class="highlight-teal"> // 學生回家</mark>　　学生を家に帰す   <mark class="highlight-teal">// 讓學生回家</mark></p><p id="e49cdfbb-f42c-4fd5-9889-883a9643a924" class="">食べ物が残る       <mark class="highlight-teal">// 食物剩下</mark>　　 食べ物を残す      <mark class="highlight-teal">// 把食物留下</mark></p><p id="c6583c53-7315-4d46-9a02-1acdae92b1c3" class="">
+</p></li></ol><ol type="1" id="d9ab3f3f-a76d-4aed-94e1-f580cd55ad97" class="numbered-list" start="7"><li>自動詞-reru → 他動詞-su<p id="f5b10296-eeaf-420f-aa4c-0825c095d157" class="">
+</p><p id="12abaccd-d7fb-49ea-a28e-904488945050" class="">服が汚れる<mark class="highlight-teal">              // 衣服髒了　　</mark>服を汚れす             <mark class="highlight-teal"> // 把衣服弄髒</mark></p><p id="b4eb960f-6668-4c78-ab8f-4f557ca3a25e" class="">パソコンが壊れる   <mark class="highlight-teal">// 電腦壞掉</mark>　　パソコンを壊れす    <mark class="highlight-teal">// 把電腦用壞</mark></p><p id="59e2390a-94b1-4792-873a-f34492bf08bb" class="">
+</p></li></ol><ol type="1" id="04a85965-3c49-4c8e-91be-17870f41249a" class="numbered-list" start="8"><li> 自動詞-aru → 他動詞-eru<p id="7f02418b-b655-457e-be63-b6a7d736819f" class="">
+</p><p id="49e400e2-b0cf-42b6-990c-2c103a26fc12" class="">ドアが閉まる       <mark class="highlight-teal">// 關門</mark>        　　ドアを閉める      <mark class="highlight-teal">// 關門</mark></p><p id="c8a01b39-9960-4e22-a6c8-f8f38bf4a397" class="">仕事が見つかる   <mark class="highlight-teal"> // 找到工作</mark>　　仕事を見つける   <mark class="highlight-teal">// 去找工作</mark></p><p id="826fca47-0e9f-490a-b430-4a3346a3d309" class="">
+</p></li></ol><ol type="1" id="aed0b353-07ae-43bb-a76b-65df22e87d3b" class="numbered-list" start="9"><li>自動詞-eru → 他動詞-u<p id="67e8f5c2-f8f9-4c57-a814-baefde8c04b2" class="">
+</p><p id="52d13d9b-658f-43b8-9f87-dbfc06b2779d" class="">ボタンがとれる    <mark class="highlight-teal">// 鈕扣掉了</mark>　　　ボタンをとる   <mark class="highlight-teal">  // 把鈕扣取下</mark></p><p id="67ed4356-bffd-48e4-9319-8b2ca8d40d1f" class="">石が砕ける           <mark class="highlight-teal">// 石頭碎了　</mark>　　石を砕く           <mark class="highlight-teal"> // 把石頭敲碎</mark></p><p id="87650971-abd8-4818-a8e7-75f69182e9b8" class="">
+</p></li></ol><ol type="1" id="951d1f48-8b0d-42db-bce0-d94d5d96c238" class="numbered-list" start="10"><li> 自動詞 → 他動詞<p id="f759f9e4-38d9-499a-a0e7-499d3ad13622" class="">
+</p><p id="30915dc4-078c-4175-a406-b0a4a3e6b243" class="">電気が消える    <mark class="highlight-teal">// 燈關</mark>    　　電気を消す       <mark class="highlight-teal"> // 把燈關</mark></p><p id="f2da2b5f-b7bb-41f6-810e-92dd3fb1f635" class="">連絡が入る      <mark class="highlight-teal">  // 有聯繫</mark>　　連絡を入れる     <mark class="highlight-teal">// 去聯繫</mark></p><p id="488d2ff0-5726-4724-aa4e-fcda49bf8c9e" class="">
+</p></li></ol></li></ol><hr id="396ce670-19fa-4c0d-a84a-835579424da3"/><p id="8ab4e97a-0365-45c1-b3e8-f0c732d56369" class="">
+</p><h2 id="a544cb2c-20c2-44cf-bc9a-ae64f2335653" class="">日語初級#38｜表示轉折關係的が 、まだ〜、 何＋量詞+も</h2><p id="f76e7385-b415-454c-811d-4337b2b3ee5b" class="">
+</p><ol type="1" id="bf38f008-48a9-4056-b359-e5f312618d82" class="numbered-list" start="1"><li> まだ + 動詞 (否定)<p id="79f3abc0-8fcd-4293-8dcb-9f7ae72c2d35" class="">
+</p><p id="774be7b4-3828-4305-aec4-103aa0107ddc" class="">何年英語を勉強しましたか。     <mark class="highlight-teal">// 你學了幾年英文?</mark></p><p id="0d24fd11-a57f-4155-9a99-2a4f3c0249f6" class="">3年勉強しました。                  <mark class="highlight-teal">   // 我學了三年。</mark></p><p id="d0e890be-3c1a-4903-84e9-78f07efe6c0e" class="">でも、<mark class="highlight-red">まだ</mark>あまりできません    <mark class="highlight-teal">// 但還是不太會。</mark></p><p id="41c35ee9-117b-450a-ae97-c8af1beacaa6" class="">
+</p><p id="3e548b9f-acbb-4373-84cf-297369f02fda" class="">夏休みにどこへいくか決めましたか。   <mark class="highlight-teal">// 暑假要去哪裡，你決定好了嗎?</mark></p><p id="f105f453-a5f0-417f-ab29-9ce463ed205f" class=""><mark class="highlight-red">まだ</mark>決めていません。 <mark class="highlight-teal">  // 還沒決定。</mark></p><p id="2cc92ec3-0bd8-4c8d-b893-c9a09092c7a1" class="">
+</p></li></ol><ol type="1" id="c68320ce-717b-4be8-9c15-87138a1ef675" class="numbered-list" start="2"><li> 小句が、小句 (轉折)　-＞　等於中文的 &quot;可是&quot;、&quot;但是&quot;，作為轉折用途<p id="47bb297d-155d-49a9-80e0-b3656a7ba93f" class="">
+</p><p id="cb99b269-7d84-47ed-970b-577fd2e1fada" class="">挑戦しました<mark class="highlight-red">が</mark>、失敗しました。                   <mark class="highlight-teal"> // 我挑戰了，但失敗了。</mark></p><p id="6f39182c-8d14-4fdc-8e72-e96de59ceb7d" class="">寿司は美味しいです<mark class="highlight-red">が</mark>、ちょっと高いです。   <mark class="highlight-teal">// 壽司很好吃，但有點貴。</mark></p><p id="f66d04a4-23b0-47a9-bbad-c2ab426ec41e" class="">今日は日曜日です<mark class="highlight-red">が</mark>、会社へ行かなければなりません。 <mark class="highlight-teal"> // 今天星期天，但我得去公司。</mark></p><p id="54797cf3-a67d-495b-af85-a21baa0ecbb8" class="">
+</p></li></ol><ol type="1" id="64ccaf1e-24e7-451f-a5e8-4e66e8b1b362" class="numbered-list" start="3"><li> 何 + 量詞 + も + 肯定形式<p id="7b1e9c2a-69a5-42a2-9b93-b83cf885c2e7" class="">
+</p><p id="89383c16-3212-4213-9ceb-294b33bab1c8" class=""><mark class="highlight-red">何</mark>回<mark class="highlight-red">も</mark>失敗しました。 <mark class="highlight-teal">     // 我失敗了好幾次。</mark></p><p id="9b203df9-3584-43ec-bba9-0b37f8a79a24" class="">この製品の開発は、<mark class="highlight-red">何</mark>年<mark class="highlight-red">も</mark>かかりました。   <mark class="highlight-teal">// 這個產品的開發花了好幾年。</mark></p><p id="da5953d6-d735-4b18-bb1f-94aeff450b7b" class="">昨日お酒を<mark class="highlight-red">何</mark>杯<mark class="highlight-red">も</mark>飲みましたが、酔いませんでした。  <mark class="highlight-teal"> // 昨天我喝了好幾杯酒，但沒喝醉。</mark></p><p id="e3ed5f4b-a92b-44b2-95a3-02418619b19a" class="">
+</p></li></ol><hr id="251f6740-b7c7-4acb-96a1-cd26c424a8ca"/><p id="c70b92b2-cbee-4c87-a808-c86f5d4b29f0" class="">
+</p><h2 id="ac08f8c8-7921-430d-8e7c-0e2996c9911f" class="">日語初級#39 | 口語中常用的語法～んです、どうして～んですか、小句が小句 </h2><p id="19ad9173-b28c-42af-9c11-6813ed8d1e04" class="">
+</p><ol type="1" id="397e57e3-637f-4275-852a-f1af9b42e299" class="numbered-list" start="1"><li> ~んです　/　のです<p id="b0e93428-36a3-4d21-8f5a-800f4721150a" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="179c013a-5a6f-456f-8165-60d4cb4f64ff"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">⁂　んです 用於<mark class="highlight-red">說明</mark>或<mark class="highlight-red">解釋原因</mark>、<mark class="highlight-red">理由</mark>
+⁂　んです 是口語形式
+⁂　のです 是書面形式
+⁂　前面接簡體形</div></figure><p id="4e98cadd-c8b4-44b2-9308-44b207ee7abf" class="">
+</p><p id="20e0eae1-dd93-4cdd-98f8-b151499e7fb5" class="">昨日は、学校へ行きませんでした。   <mark class="highlight-teal">// 昨天我沒去學校。</mark></p><p id="bc96c4e4-e1cb-44c4-99bf-997ed904bf90" class="">頭が痛かった<mark class="highlight-red">ん</mark>です。<mark class="highlight-teal">  // (因為)頭痛。</mark></p><p id="adbe7a6e-9893-4abf-9974-8f93737f07c8" class="">
+</p><p id="092861c1-d283-4d48-9e54-1abd66464a7b" class="">東京はタピオカミルクティーの店がたくさんありますね。<mark class="highlight-teal"> // 東京有很多</mark>珍珠奶茶店。</p><p id="51e91321-5a30-4d4a-80e7-75b5afd53437" class="">ええ、最近とても流行っている<mark class="highlight-red">ん</mark>です。  <mark class="highlight-teal">// 是，最近特別流行。</mark></p><p id="7ab49cfe-0ce4-42d3-b7a5-90bcff039fdf" class="">
+</p></li></ol><ol type="1" id="ff1666db-2c51-4e50-93f7-035afb6c76a3" class="numbered-list" start="2"><li> どうして～んですか　/　なぜ～のですか<p id="ec6e3edc-0929-4a94-b1db-a94aca6a2456" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a6f708f1-b3d3-4b3b-9013-f75689546233"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">⁂　<mark class="highlight-red">詢問理由</mark>的時候使用
+⁂　どうして～んですか  多用於口語
+⁂　なぜ～のですか         多用於書面語</div></figure><p id="58c84d6e-6c6f-4a8f-9fd8-46db4ae6fae6" class="">
+</p><p id="59897c87-f1d5-4288-ade3-668c8380de2d" class=""><mark class="highlight-red">どうして</mark>遅刻した<mark class="highlight-red">んですか</mark>。    <mark class="highlight-teal">// 為什麼遲到了?</mark></p><p id="de22db01-fd56-4335-b5b1-e3f789b8a8f5" class="">すみません、寝坊しました。  <mark class="highlight-teal"> // 不好意思，我睡懶覺了。</mark></p><p id="f0b4b89c-4594-4b1c-84f5-c73576650f74" class="">
+</p><p id="3ffc1bb7-c48c-4fe1-857e-d6c7312ce820" class=""><mark class="highlight-red">どうして</mark>来週は仕事がない<mark class="highlight-red">んですか</mark>。   <mark class="highlight-teal">// 為什麼下周沒有工作?</mark></p><p id="48d4144f-8057-4996-978a-a36fb3c6b0c3" class="">来週はお盆休み<mark class="highlight-yellow">なん</mark>です。 <mark class="highlight-teal"> // 下周是盂蘭盆節。</mark><mark class="highlight-yellow"> (名詞後面接)</mark></p><p id="07d9caea-61b7-42ed-9488-52d34a8d82f0" class="">
+</p><p id="b6108ac6-8d2f-4da2-a1d4-42a6acf07d56" class=""><mark class="highlight-red">なぜ</mark>私も残業しなければならない<mark class="highlight-red">のですか</mark>。 <mark class="highlight-teal"> // 為什麼我也要加班?</mark></p><p id="f842636e-d093-4b2f-bf64-88ef4c337002" class="">人手が足りないです。  <mark class="highlight-teal">// 人手不足。</mark></p><p id="8a461e20-8b94-40df-a319-181aea68b718" class="">
+</p></li></ol><ol type="1" id="a9f2eaa4-d06b-414f-ae38-2206aa59f6ba" class="numbered-list" start="3"><li> 小句が　/　けど、小句 (提示)<p id="a70ed68b-3acc-4563-8bb3-487e1ec4f448" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="dbaccbb9-70df-4c9b-a2de-14ccff63ed92"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">⁂　用於<mark class="highlight-red">提示</mark>接下來要說的內容
+⁂　が     多用於書面
+⁂　けど 多用於口語</div></figure></li></ol><p id="1d1e975f-973f-40f3-a83d-aec12f1d91b8" class=""><div class="indented"><p id="9199ba7f-16af-4f69-ad45-9e72dff50c63" class="">明後日から連休です<mark class="highlight-red">が</mark>、どうするか決めましたか。     <mark class="highlight-teal">// 從後天開始放小長假了，你想好了怎麼過嗎?</mark></p><p id="25d83124-8494-4fb2-9bbb-5010ee3f4f1b" class="">箱根へいきたいんです<mark class="highlight-red">が</mark>、バスと電車どちらが安いですか。  <mark class="highlight-teal">// 我想去箱根，巴士和電車哪個更便宜?</mark></p><p id="e09ada68-5ad9-4875-8cb8-9695e6131ef0" class="">
+</p><p id="e9636655-199d-45dc-bd94-745c903c8e9e" class="">木村さんを探しているんです<mark class="highlight-red">けど</mark>、どこにいるか知っていますか。   <mark class="highlight-teal">// 我在找木村先生，你知道他在哪嗎?</mark></p><p id="42c32ebc-1b16-419d-a6cf-0d3af0d919dd" class="">この単語がわからないん<mark class="highlight-yellow">だ</mark><mark class="highlight-red">けど</mark>、李さんわかる？  <mark class="highlight-teal">// 我看不懂這個單字，李先生看得懂嗎?  </mark></p><p id="78c86061-68d4-44a2-8aec-29bf229a63ef" class=""><mark class="highlight-yellow">(用於親密朋友或家人)</mark></p><p id="895923bb-1074-44b4-aab0-260d93e703be" class="">
+</p></div></p><hr id="22fe29d8-e09d-492d-85ee-987f7133f848"/><p id="089ecc37-549b-438d-badb-5090c9945ce8" class="">
+</p><h2 id="d3d4758d-578f-4c18-a6e4-384ee91fb425" class="">日語初級#40 | 表示状態的～ている／～てある，表示準備動作的～ておく</h2><p id="6f347f8a-1746-4847-9ffe-65fccddf4cbe" class="">
+</p><ol type="1" id="ceed88fc-532d-4c4e-81e9-66afc291e0df" class="numbered-list" start="1"><li> 自動詞 + ています　-＞　　表示結果狀態<p id="b2b64864-9e1c-4d3e-8c83-9fdef6b4cc84" class="">
+</p><p id="0560c2ad-c5e6-4ca6-a6fe-94f174ff5146" class="">電気が消え<mark class="highlight-red">ています</mark>。      <mark class="highlight-teal">  // 燈關著。</mark>  </p><p id="cf64e076-38f7-4007-b533-c151550a0205" class="">壁に絵が掛かっ<mark class="highlight-red">ています</mark>。 <mark class="highlight-teal">  // 牆上掛者畫。</mark></p><p id="a76c5f82-b413-490c-ac6b-5e6910021cfe" class="">この目覚まし時計は壊れ<mark class="highlight-red">ていません</mark>よ。  <mark class="highlight-teal">// 這個鬧鐘沒有壞阿。</mark></p></li></ol><p id="3b9f9291-58b1-437f-82dc-2fbcf0761cca" class=""><div class="indented"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e74f37c4-b85e-4b95-ac35-f81e31633d42"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">壊れました　VS　壊れています
+
+自動詞た型偏重表示<mark class="highlight-red">變化的完成</mark>，自動詞+ています偏重表示變化完成後形成的<mark class="highlight-red">結果狀態</mark>。</div></figure></div></p><p id="316c416d-5042-47b7-b7c0-d0a1750be3e4" class=""><div class="indented"><p id="6944f0c4-0cb1-4384-a51b-b7100710841e" class="">このパソコンを使ってもいいですか。   <mark class="highlight-teal">// 可不可以用這台電腦?</mark></p><p id="e40d56ec-9fbf-4dee-974f-01ee3e9f097b" class="">そのパソコンは壊れ<mark class="highlight-red">ています</mark>。別のパソコンを使ってください。 <mark class="highlight-teal">// 那台電腦壞了。請用別的電腦。</mark></p><p id="026d4429-ed05-40c5-971e-343c1133686a" class="">
+</p><p id="e30e51ed-750b-4a1f-84e8-e626e6338ee9" class="">どうしたんですか。 <mark class="highlight-teal"> // 妳怎麼了?</mark></p><p id="2d3d4ad5-f6ae-4f03-893b-ccbf9e1be1f3" class="">パソコンのデータが消え<mark class="highlight-red">ています</mark>。どうしよう.....     <mark class="highlight-teal">// 電腦的資料消失了。怎麼辦....</mark></p><p id="6e81f332-72df-4b76-bf19-d8916caa5c46" class="">
+</p></div></p><p id="6abbeda7-b938-409a-bbec-44341c7752ae" class=""> 2.    他動詞 + てあります<div class="indented"><p id="dbd2d2d8-9914-4de7-91d4-57009d670adc" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d69f6f5d-69e3-4552-b9a5-6049223058cd"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">表示<mark class="highlight-red">有意</mark>進行的<mark class="highlight-red">動作</mark>結果的存續<mark class="highlight-red">狀態</mark>
+在這個句型里<span style="border-bottom:0.05em solid">只涉及動作的對象
+
+</span>壁に（私が）絵を掛けました。<mark class="highlight-teal"> // (我) 在牆壁掛畫了。</mark><span style="border-bottom:0.05em solid">
+</span><mark class="highlight-yellow_background">-＞涉及動作的主題</mark>
+<span style="border-bottom:0.05em solid">
+</span>壁に　　　　絵が掛けてあります。<mark class="highlight-teal"> // 在牆壁上掛著畫。</mark>
+<mark class="highlight-yellow_background">-＞只涉及動作的對象</mark></div></figure><p id="7170949b-7d00-4591-a51b-08b06be81b13" class="">
+</p><p id="70742017-6679-4af3-ad93-746730f46ec4" class="">換気のために、窓が開け<mark class="highlight-red">てあります</mark>。 <mark class="highlight-teal">  // 為了通風窗戶開著。</mark></p><p id="fe21f779-17f7-48d9-8882-8d2209acf8b8" class="">教科書に名前が書い<mark class="highlight-red">てあります</mark>。<mark class="highlight-teal">  // 在課本上寫著名子。</mark></p><p id="57318140-fca8-4f6c-8603-7858600abd6f" class="">資料はもうファイルに入れ<mark class="highlight-red">てあります</mark>。 <mark class="highlight-teal">// 資料已在文件裡放著。</mark></p><p id="8c4547de-cc06-4989-8944-f5d7e4f51e22" class="">　</p></div></p><p id="d6a69879-4b05-4c63-9799-c7b5e40816e5" class=""> 3.    動詞ておきます　-＞　表示為做某種<mark class="highlight-red">準備</mark>有意識的進行的<mark class="highlight-red">動作</mark><div class="indented"><p id="9969f48d-ac03-4b5c-8a99-3284997dca75" class="">
+</p><p id="db19c7b3-ed2d-4f9e-8f40-7ebf24e19031" class="">会議の前に資料を準備し<mark class="highlight-red">ておきます</mark>。 <mark class="highlight-teal">  // 會議前把資料準備好。</mark></p><p id="766ffa72-fdde-4748-8470-4d705cb6cb61" class="">来月までにこの本を読ん<mark class="highlight-red">でおいてください</mark>。  <mark class="highlight-teal">// 下個月之前請看好這本</mark>書。</p><p id="2de6fbc1-e362-4e6f-843e-a04c9b081095" class="">先に帰りの切符を買っ<mark class="highlight-red">ておいたほうがいいですよ</mark>。 <mark class="highlight-teal">// 最好事先買好回程的票喔。</mark></p><p id="3d1fe24e-066e-4c0f-8390-61b88bfacea6" class="">
+</p><p id="b6edb646-62a4-4c7b-81e9-42a51dcd98bd" class="">10時から会議があるので、椅子はこのままにして<mark class="highlight-red">おいてください</mark>。 <mark class="highlight-teal">// 從十點開會，請把椅子保持這個狀態。</mark></p><p id="903081df-4142-47f7-bf7b-bc77a375d210" class="">使ったあとで、元の場所に戻して<mark class="highlight-red">おいてください</mark>。 <mark class="highlight-teal"> // 用完之後請放回原來的地方。</mark></p><p id="4b4c59d5-aef0-43c2-a8dd-fa4d81175c3b" class="">
+</p></div></p><hr id="d0b4ce35-678c-4800-9d1f-351d5c0e133d"/><p id="073282e3-4e71-429c-9a4d-41f89d53cd31" class="">
+</p><h2 id="e582df2a-e4db-4a25-bdfd-bb827a53399a" class="">日語初級#41 | 小句（動詞簡體形/い形容詞/な形容詞/名詞）+名詞</h2><p id="372c334a-c794-424f-8ba0-bf4a99af3185" class="">
+</p><ol type="1" id="6dbcd4f8-a355-40ef-9c60-0ca3942d508c" class="numbered-list" start="1"><li> 小句 (動詞簡體形) + 名詞<p id="ca9d1a07-8cdd-4f43-909a-b42e92677d4b" class="">
+</p><p id="f849092e-9f58-4152-bdbf-3e706e17741c" class="">これは明日会議で<mark class="highlight-red">使う</mark>資料です。<mark class="highlight-teal">  // 這是明天會議要用到的資料。</mark></p><p id="11aab124-e3f2-43d4-81f3-6d5d0d5b92d4" class="">祖母が<mark class="highlight-red">くれた</mark>指輪をつけました。 <mark class="highlight-teal"> // 我戴了祖母給我的戒指。</mark></p><p id="00920684-57fa-49e3-b465-74241db2c4a0" class="">秋葉原で<mark class="highlight-red">買った</mark>カメラを友達に貸しました。 <mark class="highlight-teal"> // 我把在秋葉原買的照相機借給朋友。</mark>  </p><p id="46c6cde1-9c6f-4d77-859a-322a0703e71b" class="">
+</p></li></ol><ol type="1" id="95c5ac49-c8ca-4e13-9fe1-6bee5cdac23d" class="numbered-list" start="2"><li>小句 (い/ま形容詞、名詞) + 名詞<p id="b6cd3576-58c0-4493-98b4-6b8e1ed9ec93" class="">
+</p><p id="e88889a6-6f45-4950-a416-d1d393a7c483" class="">家賃が<mark class="highlight-red">安い</mark>部屋に住みたいです。     <mark class="highlight-teal">// 我想住租金便宜房間。</mark></p><p id="d2234abd-ea82-4eb7-99cb-4af90eff3601" class="">祖母は操作が<mark class="highlight-red">簡単な</mark>スマホを買いました。 <mark class="highlight-teal"> // 祖母買了操作簡單的智慧手機。</mark></p><p id="96277860-8e6c-4ca3-ba05-ed93e5d18c6f" class="">昨日日本語が<mark class="highlight-red">専門の</mark>先生に会いました。  <mark class="highlight-teal">// 昨天認識了一位專門教日語的老師。</mark></p><p id="d870efc6-7bff-4654-b3f5-46a3fd2a282a" class="">
+</p></li></ol><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6d03da47-e675-4b34-a843-7ced25eac41d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">秋葉原でかいました ＋ 高いです + カメラ + 友達に貸しました
+
+→ 秋葉原で買った高いカメラを友達に貸しました。
+<mark class="highlight-teal">// 我把在秋葉原買得很貴的相機借給朋友。</mark></div></figure><p id="b8cdbe08-e76e-42fc-aa16-62f8e3cdada3" class="">
+</p><hr id="f8ac610c-fe3e-4df0-a5e0-b1de4d6d1992"/><p id="8360831a-501b-4c72-b14a-9ecbef139def" class="">
+</p><h2 id="d0b9d358-96c5-429e-9a63-f6c8c5e357d6" class="">日語初級#42 | 小句的名詞化　1小句+のは+い/な形容詞、２小句+のを+動詞</h2><p id="26017002-ca8a-456a-a716-cce4931dc840" class="">
+</p><ol type="1" id="215c5c25-c3c1-41a4-bba4-a455551a22f6" class="numbered-list" start="1"><li> 小句 (動詞簡體形) のは + い/な形容詞</li></ol><p id="0cf99441-f6e6-4002-b402-26bf2811ba3e" class=""><div class="indented"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a36f8404-a8f4-4ed8-8972-98b5d7335cf9"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">⁂　動詞小句接の使其<mark class="highlight-red">名詞化</mark>
+⁂　主語要用助詞は來表示</div></figure></div></p><p id="baa2d9f5-4421-47fa-9d9e-80bb0a0c76fa" class=""><div class="indented"><p id="ea01167b-85fd-4b65-9c35-4240c2d4568a" class="">和食を作る<mark class="highlight-red">のは</mark>楽しいです。    <mark class="highlight-teal">// 做日式料理是很愉快的。</mark></p><p id="41c433e3-b83c-4ea9-8ecd-4f58992240ed" class="">日本語で文章を書く<mark class="highlight-red">のは</mark>簡単です。   <mark class="highlight-teal">// 用日語寫文章很簡單。</mark></p><p id="48c20c26-2001-494c-ab94-9afcf2c90f93" class="">自転車に二人での乗る<mark class="highlight-red">のは</mark>危ないです。 <mark class="highlight-teal"> // 兩個人騎自行車很危險。</mark></p></div></p><p id="9a3af742-cf16-4d1f-82b1-57138667c8ce" class=""><div class="indented"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="861e3c70-e4f6-499a-81b0-a16cc2f75f4e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">好きです、嫌いです、上手です、下手です 等表示好惡擅長不擅長的形容詞是對象時，使用 が。</div></figure></div></p><p id="b82132db-9f31-400b-a0db-72d556829990" class=""><div class="indented"><p id="4cb34027-89b7-491c-8c7f-888ae396d9b2" class="">佐々木さんは車を運転する<mark class="highlight-red">のが</mark>大好きです。  <mark class="highlight-teal">// 佐々木女士特別喜歡開車。</mark></p><p id="b95e0371-c31a-49c6-812c-15dc58c972cb" class="">私は絵を描く<mark class="highlight-red">のが</mark>下手です。 <mark class="highlight-teal"> // 我不擅長畫畫。</mark></p><p id="6a46af03-55b3-4e6a-941a-75682ebe9555" class="">
+</p></div></p><p id="c8995224-948e-48b5-997e-6b729187ed42" class="">  2.   小句 (動詞簡體形) のを動詞</p><p id="62cf5cad-21a1-4bc3-bbd3-1592bc0d1631" class=""><div class="indented"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6273c110-be74-4082-81c4-3fbb743fb70d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">動詞小句接の的名詞化形式可以作<mark class="highlight-red">賓語</mark></div></figure><p id="3b9b3379-210d-4319-b17d-5036728024ac" class="">
+</p><p id="fde28a00-9fe8-435e-b8fc-86fd53816085" class="">課長に報告する<mark class="highlight-red">のを</mark>忘れました。 <mark class="highlight-teal"> // 我忘了向課長匯報。</mark></p><p id="b3cc4a1f-0764-4bfb-8381-95e069aaa835" class="">林さんは王さんが英語を勉強する<mark class="highlight-red">のを</mark>手伝います。  <mark class="highlight-teal">// 林女士幫王先生學習英文。</mark></p><p id="b857e8c1-21ff-4422-8b95-26691ec0d12c" class="">太田さんがどこにいるか知っていますか。 <mark class="highlight-teal">// 你知不知道太田女士在哪兒?</mark></p><p id="8e12faad-4300-43b0-be6b-e5c4c641fd71" class="">（彼女が）会議室にいる<mark class="highlight-red">のを</mark>見ました。  <mark class="highlight-teal">// 我看見他在會議室。</mark></p><p id="d1182089-43de-4905-8a90-b6ee914bfec2" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0ebb006e-9937-4f47-914c-1e6f345bf2ca"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">知らせます (告訴)、伝えます (轉告)、話します (說) 等
+<mark class="highlight-red">表示語言行為</mark>的動詞時，使用こと，不使用の</div></figure><p id="4128b854-f373-4ff7-bb86-c9a03711f542" class="">
+</p><p id="36f37415-aec9-4080-8a55-797b660959a9" class="">先生に森さんが休む<mark class="highlight-red">ことを</mark>伝えました。<mark class="highlight-teal"> // 我對老師轉告了森先生請假的消息。 </mark></p><p id="73225174-9353-42c8-aa2a-516babd0374c" class="">
+</p></div></p><hr id="a40dfb79-9ca3-4a95-97d1-777768be289b"/><p id="83a3849a-7098-4419-a7dd-b2bd32976955" class="">
+</p><h2 id="31ecca55-b43e-4927-9d47-18ebb0eb3e50" class="">日語初級#43 | ～とき、～ながら、～ている</h2><p id="80c294c7-1df5-4096-baf0-26656dfed8e3" class="">
+</p><ol type="1" id="fb8d861c-b659-45ee-bc84-7947eba80fed" class="numbered-list" start="1"><li> 小句 + とき<p id="c93f3b70-67a3-45b6-9a6e-62597900ed7e" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a397c64d-8c65-49f9-b715-447f3422136d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">⁂　表示時間的名詞短語
+⁂　等於中文的「~時」</div></figure><p id="ac58642b-289f-47a1-9070-8faa5af53ef6" class="">
+</p><p id="a538c224-6af7-4c76-bd27-ea8be57ae9e7" class="">暇な<mark class="highlight-red">とき</mark>、私はスマホで動画を見ます。 <mark class="highlight-teal"> // 有空時，我用手機看影片。</mark></p><p id="cccc86c5-57c8-4062-b0b0-4d0c1362d16c" class="">寒い<mark class="highlight-red">とき</mark>、こたつを使います。 <mark class="highlight-teal"> // 天氣冷的時候，我用被爐。</mark></p><p id="c48bcc49-dd97-46d1-a107-d47b846272d6" class="">大学生の<mark class="highlight-red">とき</mark>、大きな地震がありました。  <mark class="highlight-teal">// 我大學的時候，發生過大地震。</mark></p><p id="bf7af2ca-2d25-4b3b-b83a-f60e94f98596" class="">
+</p><p id="0b9c6f3a-77a0-4264-9dfb-50f3b0d58cf9" class="">タイに行く<mark class="highlight-red">とき</mark>、お土産を買いました。    <mark class="highlight-teal"> // 去泰國的時候買了禮物。</mark></p><p id="54cfc9bf-a5be-4d68-ac95-31e39c90cbba" class="">タイに行った<mark class="highlight-red">とき</mark>、空港でお土産を買いました。  <mark class="highlight-teal">// 去了泰國的時候在機場買了禮物。</mark></p><p id="ff583e3f-1102-402f-9dd9-0a74d750c587" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="59324368-2c51-4c25-9546-817497afe16a"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><mark class="highlight-red">接動詞的時候要注意 &quot;時間&quot;</mark>
+
+この本を読むとき。  → <mark class="highlight-yellow">要看這本書的時候</mark>
+この本を読んでいるとき。 →<mark class="highlight-yellow"> 在看這本書的時候</mark>
+この本を読んだとき。 → <mark class="highlight-yellow">看了這本書以後</mark></div></figure><p id="ec7f0eac-b317-4388-b0dc-dde25516c445" class="">
+</p></li></ol><ol type="1" id="18d33b52-2641-4bdd-b8fc-e9a18ddc4ede" class="numbered-list" start="2"><li> 動詞 ながら<p id="19778278-5763-4f0c-bc1e-30ca9d581162" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d3ec9b6d-cd19-4565-869a-c8ea51093efc"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">⁂　同一主體同時進行兩個動作時使用
+⁂　後面的動作是主要的動作</div></figure><p id="0ae4e9a8-d1d9-4c88-a5ea-ae256e0d7ff0" class="">
+</p><p id="c16e50d4-b30a-4a23-acb8-83b527f2e2cb" class="">音楽を聴き<mark class="highlight-red">ながら</mark>寝ます。<mark class="highlight-teal">  // 一邊聽音樂一邊睡覺。</mark></p><p id="2e1a285b-985e-408f-8a0d-7387ada85b8a" class="">西田さんは昨日ビールを飲み<mark class="highlight-red">ながら</mark>映画を見ました。  <mark class="highlight-teal">// 西田女士昨晚邊喝啤酒邊看電視。</mark></p><p id="5dd3661d-83d5-4c6f-98c0-e2cc6c6faa42" class="">
+</p></li></ol><ol type="1" id="bb22a86d-cae8-4c32-a200-24cd4b5e7d32" class="numbered-list" start="3"><li> 動詞 ています  →   表示反覆或習慣性的動作</li></ol><p id="4ae0249e-edf9-448e-bd6f-dd1ebe8e0e29" class=""><div class="indented"><p id="29007f9d-d742-4952-9466-556940f4eb8b" class="">私は毎日日本語を勉強し<mark class="highlight-red">ています</mark>。 <mark class="highlight-teal"> // 我每天學習日文。</mark></p><p id="762c23a1-2e22-4ad0-93ef-412d3cfb5ce0" class="">福岡行きの飛行機は 3 時間に 1 便飛ん<mark class="highlight-red">でいます</mark>。 <mark class="highlight-teal"> // 飛往福岡的飛機每小時飛一架。 </mark></p><p id="f253b612-9915-4539-a016-a3cfbe7ba19d" class="">李さんはアルバイトをしながら学校に通っ<mark class="highlight-red">ています</mark>。 <mark class="highlight-teal"> // 李先生邊打工邊上學</mark></p><p id="96400693-5d19-4087-bcc1-375dd414b51f" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b17f6cce-c906-4783-b141-4d39cf99b84c"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">⁂　~に通います → 表示定期來往於同一個地方
+
+佐々木さんは毎週ジム<mark class="highlight-red">に通っています</mark>。 <mark class="highlight-teal">// 佐々木先生每周都會去健身房。</mark>
+来年から毎週ジム<mark class="highlight-red">に通います</mark>。<mark class="highlight-teal"> // 我從明年每周去健身房。</mark></div></figure><p id="1b662814-48cd-42d0-a4ee-311f451625d7" class="">
+</p></div></p><hr id="4cbb40e2-d76d-4750-bb77-025414625c77"/><p id="39497750-54a0-45b7-902c-5aacfa32b781" class="">
+</p></div></article></body></html>
